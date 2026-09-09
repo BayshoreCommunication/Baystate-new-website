@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0b1e3f;
+  --navy-mid: #162d5a;
+  --navy-dark: #06111f;
+  --terracotta: #b5634a;
+  --terracotta-light: #c97659;
+  --warm-white: #f7f5f2;
+  --warm-gray: #e8e3dc;
+  --mid-gray: #9b9b9b;
+  --text-dark: #1a1a1a;
+  --text-light: #5a5a5a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-dark);
+  background-color: #ffffff;
+  line-height: 1.6;
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Hero background grid texture */
+.hero-grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Scroll reveal animations */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.reveal-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
