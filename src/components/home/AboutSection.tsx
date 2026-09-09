@@ -14,6 +14,18 @@ function FloatingBadge() {
     const el = badgeRef.current;
     if (!el) return;
 
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
+      setHasStarted(true);
+      return;
+    }
+
+    // Immediately trigger if already in view
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight + 100 && rect.bottom > -100) {
+      setHasStarted(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -22,13 +34,21 @@ function FloatingBadge() {
         }
       },
       {
-        threshold: 0.25,
-        rootMargin: "0px 0px -40px 0px",
+        threshold: 0.05,
+        rootMargin: "0px 0px 60px 0px",
       },
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+
+    const safetyTimer = setTimeout(() => {
+      setHasStarted(true);
+    }, 2000);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(safetyTimer);
+    };
   }, []);
 
   useEffect(() => {

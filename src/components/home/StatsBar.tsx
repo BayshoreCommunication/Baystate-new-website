@@ -105,23 +105,42 @@ export function StatsBar() {
     const el = sectionRef.current;
     if (!el) return;
 
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
+      setIsInView(true);
+      return;
+    }
+
+    // Immediately trigger if already in view
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight + 100 && rect.bottom > -100) {
+      setIsInView(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Trigger when stats bar enters the viewport
         if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
         }
       },
       {
-        threshold: 0.15,
-        rootMargin: "0px 0px -30px 0px",
+        threshold: 0.02,
+        rootMargin: "0px 0px 50px 0px",
       },
     );
 
     observer.observe(el);
 
-    return () => observer.disconnect();
+    // Fallback timer ensures stats are never permanently invisible
+    const safetyTimer = setTimeout(() => {
+      setIsInView(true);
+    }, 1500);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(safetyTimer);
+    };
   }, []);
 
   return (
