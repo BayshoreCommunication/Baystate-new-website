@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/common/Container";
 import { ScrollReveal } from "@/components/common/ScrollReveal";
+import { CountUp } from "@/components/common/CountUp";
 
 export function AboutSection() {
   const credentials = [
@@ -91,7 +92,7 @@ export function AboutSection() {
               {/* Floating Badge */}
               <div className="absolute top-7 -right-2 sm:-right-4 bg-terracotta text-white py-5 px-5 sm:px-6 rounded-md text-center shadow-[0_8px_30px_rgba(181,99,74,0.45)] z-10">
                 <div className="font-serif text-3xl sm:text-[38px] leading-none">
-                  10+
+                  <CountUp value="10+" duration={1300} delay={300} />
                 </div>
                 <div className="text-[10px] tracking-[0.14em] uppercase text-white/85 mt-1.5 leading-tight">
                   Years Leading

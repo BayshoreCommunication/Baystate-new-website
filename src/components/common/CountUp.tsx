@@ -5,10 +5,16 @@ import React, { useEffect, useRef, useState } from "react";
 interface CountUpProps {
   value: string;
   duration?: number;
+  delay?: number;
   className?: string;
 }
 
-export function CountUp({ value, duration = 1600, className }: CountUpProps) {
+export function CountUp({
+  value,
+  duration = 1300,
+  delay = 200,
+  className,
+}: CountUpProps) {
   const [displayValue, setDisplayValue] = useState<string>("0");
   const [hasStarted, setHasStarted] = useState(false);
   const elementRef = useRef<HTMLSpanElement>(null);
@@ -17,22 +23,32 @@ export function CountUp({ value, duration = 1600, className }: CountUpProps) {
   const isNumeric = !!match;
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setHasStarted(true);
+          timeoutId = setTimeout(() => {
+            setHasStarted(true);
+          }, delay);
           observer.disconnect();
         }
       },
-      { threshold: 0.15 },
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -30px 0px",
+      },
     );
 
     if (elementRef.current) {
       observer.observe(elementRef.current);
     }
 
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      observer.disconnect();
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [delay]);
 
   useEffect(() => {
     if (!hasStarted) return;
@@ -55,13 +71,14 @@ export function CountUp({ value, duration = 1600, className }: CountUpProps) {
       const elapsed = timestamp - startTime;
       const progress = Math.min(elapsed / duration, 1);
 
-      // easeOutCubic: decelerates toward the end for realistic effect
-      const easeOut = 1 - Math.pow(1 - progress, 3);
-      const current = easeOut * target;
+      // easeOutExpo for dramatic deceleration at the end
+      const easeProgress =
+        progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      const current = easeProgress * target;
 
       const formatted = isDecimal
         ? current.toFixed(decimalPlaces)
-        : Math.round(current).toString();
+        : Math.floor(current).toString();
 
       setDisplayValue(`${prefix}${formatted}${suffix}`);
 
