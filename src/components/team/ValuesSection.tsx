@@ -20,9 +20,11 @@ export function ValuesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0.5 bg-white/[0.06] rounded-xl overflow-hidden border border-white/[0.05]">
           {companyValues.map((val, idx) => (
             <ScrollReveal key={idx} delay={idx * 50} className="h-full">
-              <div className="h-full bg-navy/90 p-9 sm:p-10 border border-white/[0.05] flex flex-col">
-                <div className="text-[28px] mb-4.5">{val.icon}</div>
-                <h3 className="font-serif text-[22px] text-white font-normal mb-3">
+              <div className="group h-full bg-navy/90 hover:bg-white/[0.06] p-9 sm:p-10 border border-white/[0.05] hover:border-terracotta/35 flex flex-col transition-all duration-300 ease-out hover:-translate-y-1">
+                <div className="text-[28px] mb-4.5 transition-transform duration-300 group-hover:scale-110 origin-left">
+                  {val.icon}
+                </div>
+                <h3 className="font-serif text-[22px] text-white font-normal mb-3 transition-colors group-hover:text-white">
                   {val.title}
                 </h3>
                 <p className="text-sm text-white/50 leading-[1.7]">

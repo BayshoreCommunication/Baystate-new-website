@@ -31,9 +31,9 @@ export function ServicesSection() {
             >
               <Link
                 href={`/services/${service.slug}`}
-                className="group block h-full bg-navy/90 hover:bg-white/[0.06] p-8 sm:p-9 transition-colors duration-200 border border-white/[0.05]"
+                className="group block h-full bg-navy/90 hover:bg-white/[0.08] p-8 sm:p-9 transition-all duration-300 ease-out border border-white/[0.06] hover:border-terracotta/40 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.3)]"
               >
-                <div className="w-[46px] h-[46px] border border-terracotta/40 rounded-lg flex items-center justify-center text-terracotta text-[22px] mb-6 transition-colors group-hover:border-terracotta">
+                <div className="w-[46px] h-[46px] border border-terracotta/40 rounded-lg flex items-center justify-center text-terracotta text-[22px] mb-6 transition-all duration-300 group-hover:border-terracotta group-hover:scale-110 group-hover:bg-terracotta/10">
                   <IconRenderer
                     name={service.iconName}
                     fallbackEmoji={service.icon}
@@ -41,7 +41,7 @@ export function ServicesSection() {
                   />
                 </div>
 
-                <h3 className="font-serif text-[22px] text-white font-normal mb-3 leading-[1.2]">
+                <h3 className="font-serif text-[22px] text-white font-normal mb-3 leading-[1.2] transition-colors duration-200 group-hover:text-white">
                   {service.title}
                 </h3>
 
@@ -53,16 +53,18 @@ export function ServicesSection() {
                   {service.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="text-[10px] tracking-[0.1em] uppercase text-terracotta border border-terracotta/30 px-2.5 py-1 rounded-[3px]"
+                      className="text-[10px] tracking-[0.1em] uppercase text-terracotta border border-terracotta/30 px-2.5 py-1 rounded-[3px] transition-colors group-hover:border-terracotta/50"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div className="inline-flex items-center gap-1.5 mt-5 text-xs font-medium text-terracotta tracking-[0.06em] uppercase transition-all duration-200 group-hover:gap-2.5">
+                <div className="inline-flex items-center gap-1.5 mt-5 text-xs font-medium text-terracotta tracking-[0.06em] uppercase transition-all duration-200">
                   <span>View Service</span>
-                  <span>→</span>
+                  <span className="transition-transform duration-200 group-hover:translate-x-1.5">
+                    →
+                  </span>
                 </div>
               </Link>
             </ScrollReveal>
@@ -72,14 +74,15 @@ export function ServicesSection() {
           {featuredService && (
             <ScrollReveal
               delay={350}
+              variant="scale"
               className="col-span-1 md:col-span-2 lg:col-span-3"
             >
               <Link
                 href={`/services/${featuredService.slug}`}
-                className="group block bg-navy/90 hover:bg-white/[0.06] p-8 sm:p-9 transition-colors duration-200 border border-white/[0.05]"
+                className="group block bg-navy/90 hover:bg-white/[0.08] p-8 sm:p-9 transition-all duration-300 ease-out border border-white/[0.06] hover:border-terracotta/40 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]"
               >
                 <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 items-start">
-                  <div className="w-[46px] h-[46px] border border-terracotta/40 rounded-lg flex items-center justify-center text-terracotta text-[22px] transition-colors group-hover:border-terracotta">
+                  <div className="w-[46px] h-[46px] border border-terracotta/40 rounded-lg flex items-center justify-center text-terracotta text-[22px] transition-all duration-300 group-hover:border-terracotta group-hover:scale-110 group-hover:bg-terracotta/10">
                     <IconRenderer
                       name={featuredService.iconName}
                       fallbackEmoji={featuredService.icon}
@@ -99,16 +102,18 @@ export function ServicesSection() {
                       {featuredService.tags.map((tag, tIdx) => (
                         <span
                           key={tIdx}
-                          className="text-[10px] tracking-[0.1em] uppercase text-terracotta border border-terracotta/30 px-2.5 py-1 rounded-[3px]"
+                          className="text-[10px] tracking-[0.1em] uppercase text-terracotta border border-terracotta/30 px-2.5 py-1 rounded-[3px] transition-colors group-hover:border-terracotta/50"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
 
-                    <div className="inline-flex items-center gap-1.5 mt-5 text-xs font-medium text-terracotta tracking-[0.06em] uppercase transition-all duration-200 group-hover:gap-2.5">
+                    <div className="inline-flex items-center gap-1.5 mt-5 text-xs font-medium text-terracotta tracking-[0.06em] uppercase transition-all duration-200">
                       <span>View Service</span>
-                      <span>→</span>
+                      <span className="transition-transform duration-200 group-hover:translate-x-1.5">
+                        →
+                      </span>
                     </div>
                   </div>
                 </div>

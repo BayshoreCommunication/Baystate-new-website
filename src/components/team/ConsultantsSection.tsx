@@ -21,15 +21,15 @@ export function ConsultantsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {consultantsData.map((consultant, idx) => (
             <ScrollReveal key={idx} delay={idx * 60} className="h-full">
-              <div className="h-full bg-white rounded-xl overflow-hidden border border-warm-gray transition-shadow duration-200 hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] flex flex-col">
-                <div className="relative w-full aspect-[4/3]">
+              <div className="group h-full bg-white rounded-xl overflow-hidden border border-warm-gray transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-terracotta/35 hover:shadow-[0_16px_40px_rgba(11,30,63,0.1)] flex flex-col">
+                <div className="relative w-full aspect-[4/3] overflow-hidden">
                   <Image
                     src={consultant.image}
                     alt={consultant.name}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
-                  <div className="absolute top-3.5 left-3.5 bg-terracotta text-white text-[10px] font-semibold tracking-[0.12em] uppercase px-2.5 py-1 rounded-full">
+                  <div className="absolute top-3.5 left-3.5 bg-terracotta text-white text-[10px] font-semibold tracking-[0.12em] uppercase px-2.5 py-1 rounded-full shadow-sm">
                     {consultant.roleBadge}
                   </div>
                 </div>
@@ -49,7 +49,7 @@ export function ConsultantsSection() {
                     {consultant.tags.map((tag, tIdx) => (
                       <span
                         key={tIdx}
-                        className="text-[11px] text-navy bg-warm-white border border-warm-gray px-2.5 py-1 rounded-full"
+                        className="text-[11px] text-navy bg-warm-white border border-warm-gray px-2.5 py-1 rounded-full transition-colors group-hover:border-terracotta/30"
                       >
                         {tag}
                       </span>
@@ -60,9 +60,9 @@ export function ConsultantsSection() {
             </ScrollReveal>
           ))}
 
-          {/* Card 6: Join Network Card */}
+          {/* Join as a Consultant CTA Card */}
           <ScrollReveal delay={300} className="h-full">
-            <div className="h-full min-h-[380px] bg-navy rounded-xl p-8 sm:p-9 flex flex-col justify-center items-center text-center">
+            <div className="h-full bg-navy rounded-xl p-7 flex flex-col justify-center text-white border border-white/10 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-terracotta/40 hover:shadow-[0_16px_40px_rgba(0,0,0,0.25)]">
               <div className="text-4xl mb-5">🤝</div>
               <h3 className="font-serif text-2xl text-white font-normal mb-3 leading-[1.2]">
                 Could be you.

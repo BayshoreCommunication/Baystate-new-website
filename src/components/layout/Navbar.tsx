@@ -18,7 +18,7 @@ export function Navbar() {
             <li key={item.label}>
               <Link
                 href={item.href}
-                className="bg-terracotta hover:bg-terracotta-light text-white px-5 py-2.5 rounded text-[13px] font-medium tracking-[0.04em] transition-colors duration-200"
+                className="bg-terracotta hover:bg-terracotta-light active:scale-95 text-white px-5 py-2.5 rounded text-[13px] font-medium tracking-[0.04em] transition-all duration-200 shadow-sm hover:shadow-[0_4px_16px_rgba(181,99,74,0.35)]"
               >
                 {item.label}
               </Link>
@@ -34,7 +34,7 @@ export function Navbar() {
               <Link
                 href={item.href}
                 className={cn(
-                  "text-[13px] tracking-[0.04em] font-normal transition-colors duration-200 inline-flex items-center gap-1.5",
+                  "text-[13px] tracking-[0.04em] font-normal transition-colors duration-200 inline-flex items-center gap-1.5 py-1",
                   isServicesActive
                     ? "text-white font-medium"
                     : "text-white/75 hover:text-white",
@@ -47,7 +47,7 @@ export function Navbar() {
               </Link>
 
               {/* Dropdown Menu */}
-              <div className="absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-[300px] bg-white rounded-xl p-2 shadow-[0_12px_48px_rgba(0,0,0,0.18)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div className="absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-[300px] bg-white rounded-xl p-2 shadow-[0_16px_48px_rgba(0,0,0,0.18)] opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-50 pointer-events-none group-hover:pointer-events-auto">
                 {/* Arrow Pointer */}
                 <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-0 h-0 border-x-[7px] border-x-transparent border-b-[7px] border-b-white" />
 
@@ -57,7 +57,7 @@ export function Navbar() {
                       <Link
                         href={subItem.href}
                         className={cn(
-                          "flex items-center gap-2.5 px-3.5 py-2.5 rounded-md text-[13px] text-primary-text transition-colors duration-150 hover:bg-warm-white hover:text-terracotta",
+                          "flex items-center gap-2.5 px-3.5 py-2.5 rounded-md text-[13px] text-primary-text transition-all duration-150 hover:bg-warm-white hover:text-terracotta hover:translate-x-1",
                           pathname === subItem.href &&
                             "text-terracotta bg-warm-white font-medium",
                         )}
@@ -85,10 +85,10 @@ export function Navbar() {
             <Link
               href={item.href}
               className={cn(
-                "text-[13px] tracking-[0.04em] font-normal transition-colors duration-200",
+                "text-[13px] tracking-[0.04em] font-normal transition-colors duration-200 relative py-1 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-terracotta after:transition-all after:duration-200 hover:after:w-full",
                 isActive
-                  ? "text-white font-medium"
-                  : "text-white/75 hover:text-white",
+                  ? "text-white font-medium after:w-full"
+                  : "text-white/75",
               )}
             >
               {item.label}

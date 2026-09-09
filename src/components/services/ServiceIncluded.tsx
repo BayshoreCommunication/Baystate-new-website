@@ -49,11 +49,11 @@ export function ServiceIncluded({
             <ScrollReveal key={index} delay={index * 50} className="h-full">
               <div
                 className={cn(
-                  "h-full rounded-lg p-7 sm:p-8 border border-warm-gray transition-shadow duration-200 hover:shadow-[0_6px_24px_rgba(0,0,0,0.08)] flex flex-col",
+                  "group h-full rounded-lg p-7 sm:p-8 border border-warm-gray transition-all duration-300 ease-out hover:border-terracotta/30 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(11,30,63,0.08)] flex flex-col",
                   isWhiteBg ? "bg-warm-white" : "bg-white",
                 )}
               >
-                <div className="text-[26px] text-terracotta mb-3.5 flex items-center">
+                <div className="text-[26px] text-terracotta mb-3.5 flex items-center transition-transform duration-300 group-hover:scale-110 origin-left">
                   <IconRenderer
                     name={item.iconName}
                     fallbackEmoji={item.icon}

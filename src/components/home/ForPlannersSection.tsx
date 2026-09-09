@@ -60,8 +60,8 @@ export function ForPlannersSection() {
           <ScrollReveal delay={120}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               {/* Featured Card */}
-              <div className="sm:col-span-2 bg-navy rounded-lg p-6 sm:p-7 border border-navy shadow-sm transition-shadow duration-200 hover:shadow-md">
-                <div className="text-terracotta text-2xl mb-3">
+              <div className="group sm:col-span-2 bg-navy rounded-lg p-6 sm:p-7 border border-navy/80 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-terracotta/40 hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)]">
+                <div className="text-terracotta text-2xl mb-3 transition-transform duration-300 group-hover:scale-110 origin-left">
                   <Zap className="w-6 h-6" />
                 </div>
                 <div className="text-[15px] font-semibold text-white mb-2">
@@ -75,8 +75,8 @@ export function ForPlannersSection() {
               </div>
 
               {/* Card 2 */}
-              <div className="bg-white rounded-lg p-6 sm:p-7 border border-warm-gray shadow-sm transition-shadow duration-200 hover:shadow-md">
-                <div className="text-navy text-2xl mb-3">
+              <div className="group bg-white rounded-lg p-6 sm:p-7 border border-warm-gray shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-terracotta/40 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)]">
+                <div className="text-navy text-2xl mb-3 transition-transform duration-300 group-hover:scale-110 origin-left">
                   <BarChart2 className="w-6 h-6 text-terracotta" />
                 </div>
                 <div className="text-[15px] font-semibold text-navy mb-2">
@@ -89,8 +89,8 @@ export function ForPlannersSection() {
               </div>
 
               {/* Card 3 */}
-              <div className="bg-white rounded-lg p-6 sm:p-7 border border-warm-gray shadow-sm transition-shadow duration-200 hover:shadow-md">
-                <div className="text-navy text-2xl mb-3">
+              <div className="group bg-white rounded-lg p-6 sm:p-7 border border-warm-gray shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-terracotta/40 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)]">
+                <div className="text-navy text-2xl mb-3 transition-transform duration-300 group-hover:scale-110 origin-left">
                   <Handshake className="w-6 h-6 text-terracotta" />
                 </div>
                 <div className="text-[15px] font-semibold text-navy mb-2">
@@ -103,8 +103,8 @@ export function ForPlannersSection() {
               </div>
 
               {/* Card 4 */}
-              <div className="sm:col-span-2 bg-white rounded-lg p-6 sm:p-7 border border-warm-gray shadow-sm transition-shadow duration-200 hover:shadow-md">
-                <div className="text-navy text-2xl mb-3">
+              <div className="group sm:col-span-2 bg-white rounded-lg p-6 sm:p-7 border border-warm-gray shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-terracotta/40 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)]">
+                <div className="text-navy text-2xl mb-3 transition-transform duration-300 group-hover:scale-110 origin-left">
                   <DollarSign className="w-6 h-6 text-terracotta" />
                 </div>
                 <div className="text-[15px] font-semibold text-navy mb-2">

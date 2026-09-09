@@ -29,8 +29,8 @@ export function ForDevelopersSection() {
           <ScrollReveal delay={120}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               {/* Featured Card */}
-              <div className="sm:col-span-2 bg-white/[0.06] rounded-lg p-6 sm:p-7 border border-white/10 shadow-sm">
-                <div className="text-terracotta text-2xl mb-3">
+              <div className="group sm:col-span-2 bg-white/[0.06] hover:bg-white/[0.09] rounded-lg p-6 sm:p-7 border border-white/10 hover:border-terracotta/40 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]">
+                <div className="text-terracotta text-2xl mb-3 transition-transform duration-300 group-hover:scale-110 origin-left">
                   <Landmark className="w-6 h-6" />
                 </div>
                 <div className="text-[15px] font-semibold text-white mb-2">
@@ -44,8 +44,8 @@ export function ForDevelopersSection() {
               </div>
 
               {/* Card 2 */}
-              <div className="bg-white/[0.04] rounded-lg p-6 sm:p-7 border border-white/[0.08] shadow-sm">
-                <div className="text-terracotta text-2xl mb-3">
+              <div className="group bg-white/[0.04] hover:bg-white/[0.08] rounded-lg p-6 sm:p-7 border border-white/[0.08] hover:border-terracotta/40 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.3)]">
+                <div className="text-terracotta text-2xl mb-3 transition-transform duration-300 group-hover:scale-110 origin-left">
                   <FileCheck className="w-6 h-6" />
                 </div>
                 <div className="text-[15px] font-semibold text-white mb-2">
@@ -58,8 +58,8 @@ export function ForDevelopersSection() {
               </div>
 
               {/* Card 3 */}
-              <div className="bg-white/[0.04] rounded-lg p-6 sm:p-7 border border-white/[0.08] shadow-sm">
-                <div className="text-terracotta text-2xl mb-3">
+              <div className="group bg-white/[0.04] hover:bg-white/[0.08] rounded-lg p-6 sm:p-7 border border-white/[0.08] hover:border-terracotta/40 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.3)]">
+                <div className="text-terracotta text-2xl mb-3 transition-transform duration-300 group-hover:scale-110 origin-left">
                   <Database className="w-6 h-6" />
                 </div>
                 <div className="text-[15px] font-semibold text-white mb-2">
@@ -72,8 +72,8 @@ export function ForDevelopersSection() {
               </div>
 
               {/* Card 4 */}
-              <div className="bg-white/[0.04] rounded-lg p-6 sm:p-7 border border-white/[0.08] shadow-sm">
-                <div className="text-terracotta text-2xl mb-3">
+              <div className="group bg-white/[0.04] hover:bg-white/[0.08] rounded-lg p-6 sm:p-7 border border-white/[0.08] hover:border-terracotta/40 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.3)]">
+                <div className="text-terracotta text-2xl mb-3 transition-transform duration-300 group-hover:scale-110 origin-left">
                   <Handshake className="w-6 h-6" />
                 </div>
                 <div className="text-[15px] font-semibold text-white mb-2">
@@ -86,8 +86,8 @@ export function ForDevelopersSection() {
               </div>
 
               {/* Card 5 */}
-              <div className="bg-white/[0.04] rounded-lg p-6 sm:p-7 border border-white/[0.08] shadow-sm">
-                <div className="text-terracotta text-2xl mb-3">
+              <div className="group bg-white/[0.04] hover:bg-white/[0.08] rounded-lg p-6 sm:p-7 border border-white/[0.08] hover:border-terracotta/40 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.3)]">
+                <div className="text-terracotta text-2xl mb-3 transition-transform duration-300 group-hover:scale-110 origin-left">
                   <CheckSquare className="w-6 h-6" />
                 </div>
                 <div className="text-[15px] font-semibold text-white mb-2">

@@ -16,7 +16,7 @@ export function BlogCard({ post, featured = false, className }: BlogCardProps) {
     return (
       <article
         className={cn(
-          "group grid grid-cols-1 lg:grid-cols-12 gap-8 bg-warm-white rounded-2xl overflow-hidden border border-warm-gray p-6 sm:p-8 lg:p-10 transition-shadow duration-300 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)]",
+          "group grid grid-cols-1 lg:grid-cols-12 gap-8 bg-warm-white rounded-2xl overflow-hidden border border-warm-gray p-6 sm:p-8 lg:p-10 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-terracotta/40 hover:shadow-[0_16px_48px_rgba(0,0,0,0.1)]",
           className,
         )}
       >
@@ -26,7 +26,7 @@ export function BlogCard({ post, featured = false, className }: BlogCardProps) {
             alt={post.imageAlt}
             fill
             priority
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
           <div className="absolute top-4 left-4 bg-terracotta text-white text-[11px] font-semibold tracking-[0.1em] uppercase px-3 py-1 rounded-full shadow-sm">
             Featured Article
@@ -56,7 +56,7 @@ export function BlogCard({ post, featured = false, className }: BlogCardProps) {
               className="flex items-start justify-between gap-2"
             >
               <span>{post.title}</span>
-              <ArrowUpRight className="w-6 h-6 shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-terracotta" />
+              <ArrowUpRight className="w-6 h-6 shrink-0 opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-200 text-terracotta" />
             </Link>
           </h3>
 
@@ -76,7 +76,7 @@ export function BlogCard({ post, featured = false, className }: BlogCardProps) {
               </div>
             )}
             <div>
-              <div className="text-sm font-semibold text-navy leading-tight">
+              <div className="text-xs font-semibold text-navy">
                 {post.author.name}
               </div>
               <div className="text-xs text-primary-muted">
@@ -92,7 +92,7 @@ export function BlogCard({ post, featured = false, className }: BlogCardProps) {
   return (
     <article
       className={cn(
-        "group bg-white rounded-xl overflow-hidden border border-warm-gray transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] flex flex-col h-full",
+        "group bg-white rounded-xl overflow-hidden border border-warm-gray transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-terracotta/35 hover:shadow-[0_12px_36px_rgba(0,0,0,0.08)] flex flex-col h-full",
         className,
       )}
     >
@@ -101,7 +101,7 @@ export function BlogCard({ post, featured = false, className }: BlogCardProps) {
           src={post.image}
           alt={post.imageAlt}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
         <div className="absolute top-3.5 left-3.5 bg-white/90 backdrop-blur-sm text-navy text-[10px] font-semibold tracking-[0.1em] uppercase px-2.5 py-1 rounded-full shadow-sm border border-white/60">
           {post.category}
@@ -127,7 +127,7 @@ export function BlogCard({ post, featured = false, className }: BlogCardProps) {
             className="flex items-start justify-between gap-2"
           >
             <span>{post.title}</span>
-            <ArrowUpRight className="w-5 h-5 shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-terracotta" />
+            <ArrowUpRight className="w-5 h-5 shrink-0 opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-200 text-terracotta" />
           </Link>
         </h3>
 

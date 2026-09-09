@@ -141,7 +141,7 @@ export function AboutSection() {
               {credentials.map((cred, idx) => (
                 <div
                   key={idx}
-                  className="p-4 sm:px-5 sm:py-3.5 bg-warm-white rounded-md border-l-[3px] border-terracotta"
+                  className="p-4 sm:px-5 sm:py-3.5 bg-warm-white rounded-md border-l-[3px] border-terracotta transition-all duration-200 hover:translate-x-1.5 hover:bg-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]"
                 >
                   <div className="text-xs font-semibold text-navy tracking-[0.04em] uppercase">
                     {cred.org}
@@ -156,13 +156,13 @@ export function AboutSection() {
 
           {/* Right Column with Floating Images & Badge */}
           <ScrollReveal delay={120} className="relative pb-10 sm:pb-12">
-            <div className="relative">
+            <div className="relative group">
               <div className="relative w-full aspect-[4/5] rounded-lg overflow-hidden shadow-md">
                 <Image
                   src="https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=800&q=80"
                   alt="Urban planning professionals collaborating"
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               </div>
 
@@ -170,7 +170,7 @@ export function AboutSection() {
               <FloatingBadge />
 
               {/* Accent Image */}
-              <div className="hidden sm:block absolute -bottom-8 -left-8 w-[52%] aspect-[4/3] rounded-md overflow-hidden border-4 border-white shadow-[0_10px_40px_rgba(0,0,0,0.16)] z-10">
+              <div className="hidden sm:block absolute -bottom-8 -left-8 w-[52%] aspect-[4/3] rounded-md overflow-hidden border-4 border-white shadow-[0_10px_40px_rgba(0,0,0,0.16)] z-10 transition-transform duration-500 ease-out hover:scale-105 hover:shadow-[0_16px_48px_rgba(0,0,0,0.24)]">
                 <Image
                   src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80"
                   alt="Urban planning map"
