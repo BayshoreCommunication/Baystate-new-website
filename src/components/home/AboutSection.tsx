@@ -1,8 +1,86 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Container } from "@/components/common/Container";
 import { ScrollReveal } from "@/components/common/ScrollReveal";
-import { CountUp } from "@/components/common/CountUp";
+
+function FloatingBadge() {
+  const badgeRef = useRef<HTMLDivElement>(null);
+  const [count, setCount] = useState<number>(0);
+  const [hasStarted, setHasStarted] = useState(false);
+
+  useEffect(() => {
+    const el = badgeRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setHasStarted(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.25,
+        rootMargin: "0px 0px -40px 0px",
+      },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    // Delay 350ms so parent ScrollReveal fade-in is visible before counting starts
+    const timer = setTimeout(() => {
+      const target = 10;
+      const duration = 1200; // ms
+      const startTime = performance.now();
+
+      const animate = (currentTime: number) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // easeOutExpo for dramatic deceleration at the end
+        const easeOut =
+          progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        const currentCount = Math.floor(easeOut * target);
+
+        setCount(currentCount);
+
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        } else {
+          setCount(10);
+        }
+      };
+
+      requestAnimationFrame(animate);
+    }, 350);
+
+    return () => clearTimeout(timer);
+  }, [hasStarted]);
+
+  return (
+    <div
+      ref={badgeRef}
+      className="absolute top-7 -right-2 sm:-right-4 bg-terracotta text-white py-5 px-5 sm:px-6 rounded-md text-center shadow-[0_8px_30px_rgba(181,99,74,0.45)] z-10"
+    >
+      <div className="font-serif text-3xl sm:text-[38px] leading-none select-none">
+        <span>{hasStarted ? count : "0"}</span>
+        <span>+</span>
+      </div>
+      <div className="text-[10px] tracking-[0.14em] uppercase text-white/85 mt-1.5 leading-tight">
+        Years Leading
+        <br />
+        Communities
+      </div>
+    </div>
+  );
+}
 
 export function AboutSection() {
   const credentials = [
@@ -89,17 +167,8 @@ export function AboutSection() {
                 />
               </div>
 
-              {/* Floating Badge */}
-              <div className="absolute top-7 -right-2 sm:-right-4 bg-terracotta text-white py-5 px-5 sm:px-6 rounded-md text-center shadow-[0_8px_30px_rgba(181,99,74,0.45)] z-10">
-                <div className="font-serif text-3xl sm:text-[38px] leading-none">
-                  <CountUp value="10+" duration={1300} delay={300} />
-                </div>
-                <div className="text-[10px] tracking-[0.14em] uppercase text-white/85 mt-1.5 leading-tight">
-                  Years Leading
-                  <br />
-                  Communities
-                </div>
-              </div>
+              {/* Floating Badge with Synchronized Live Count-Up */}
+              <FloatingBadge />
 
               {/* Accent Image */}
               <div className="hidden sm:block absolute -bottom-8 -left-8 w-[52%] aspect-[4/3] rounded-md overflow-hidden border-4 border-white shadow-[0_10px_40px_rgba(0,0,0,0.16)] z-10">

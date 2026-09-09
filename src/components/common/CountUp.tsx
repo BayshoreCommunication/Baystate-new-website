@@ -72,8 +72,7 @@ export function CountUp({
       const progress = Math.min(elapsed / duration, 1);
 
       // easeOutExpo for dramatic deceleration at the end
-      const easeProgress =
-        progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
       const current = easeProgress * target;
 
       const formatted = isDecimal
