@@ -1,13 +1,16 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import { ContactFormData } from "@/types/contact";
+import { siteConfig } from "@/data/site";
 import {
   CheckCircle2,
   ChevronDown,
   Loader2,
   ArrowRight,
   Check,
+  AlertCircle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -34,6 +37,7 @@ export function ContactForm() {
 
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [serviceError, setServiceError] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -51,8 +55,9 @@ export function ContactForm() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrorMessage(null);
 
     if (!formData.service) {
       setServiceError(true);
@@ -63,11 +68,70 @@ export function ContactForm() {
     setServiceError(false);
     setIsSubmitting(true);
 
-    // Simulate clean submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
+    const recipientEmail =
+      process.env.NEXT_PUBLIC_CONTACT_RECIPIENT_EMAIL ||
+      siteConfig.email ||
+      "info@baystateplanning.com";
+
+    const templateParams = {
+      first_name: formData.firstName,
+      last_name: formData.lastName,
+      from_name: `${formData.firstName} ${formData.lastName}`.trim(),
+      from_email: formData.email,
+      reply_to: formData.email,
+      organization: formData.organization || "Not specified",
+      service: formData.service,
+      message: formData.message,
+      to_email: recipientEmail,
+    };
+
+    // Check if keys are actually provided or if still in default placeholder state
+    const isConfigured =
+      serviceId &&
+      templateId &&
+      publicKey &&
+      !serviceId.includes("your_") &&
+      !templateId.includes("your_") &&
+      !publicKey.includes("your_");
+
+    try {
+      if (isConfigured) {
+        await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      } else {
+        // Development / Demo fallback when API keys are not yet configured in .env.local
+        console.info(
+          "EmailJS credentials not set or contain placeholders in .env.local. Simulating successful transmission with params:",
+          templateParams,
+        );
+        await new Promise((resolve) => setTimeout(resolve, 800));
+      }
+
       setSubmitted(true);
-    }, 600);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        organization: "",
+        service: "",
+        message: "",
+      });
+    } catch (err: unknown) {
+      console.error("EmailJS submission error:", err);
+      const errDetail =
+        err && typeof err === "object" && "text" in err
+          ? String((err as { text: unknown }).text)
+          : null;
+      setErrorMessage(
+        errDetail
+          ? `Could not send message (${errDetail}). Please try again or email us directly at ${recipientEmail}.`
+          : `We couldn't deliver your message right now. Please try again or email us directly at ${recipientEmail}.`,
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -271,6 +335,15 @@ export function ContactForm() {
           className="w-full bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 rounded-lg px-4 py-3 text-white text-sm placeholder:text-white/35 focus:border-terracotta focus:ring-1 focus:ring-terracotta/40 focus:bg-white/[0.07] focus:outline-none transition-all resize-y min-h-[120px]"
         />
       </div>
+
+      {errorMessage && (
+        <div className="mb-6 p-4 rounded-lg bg-red-500/10 border border-red-500/30 flex items-start gap-3 text-left">
+          <AlertCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
+          <div className="text-sm text-red-200/90 leading-relaxed">
+            {errorMessage}
+          </div>
+        </div>
+      )}
 
       <button
         type="submit"
