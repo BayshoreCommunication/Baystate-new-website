@@ -1,6 +1,7 @@
 import React from "react";
 import { siteConfig } from "@/data/site";
 import { ScrollReveal } from "@/components/common/ScrollReveal";
+import { CountUp } from "@/components/common/CountUp";
 
 export function StatsBar() {
   return (
@@ -17,7 +18,7 @@ export function StatsBar() {
             }`}
           >
             <div className="font-serif text-3xl sm:text-[44px] text-navy leading-none mb-2">
-              {stat.num}
+              <CountUp value={stat.num} duration={1400} />
             </div>
             <div className="text-[10px] sm:text-[11px] text-gray-mid tracking-[0.13em] uppercase font-medium">
               {stat.label}
