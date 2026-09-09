@@ -177,6 +177,7 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
+      style={{ colorScheme: "dark" }}
       className="bg-white/[0.04] border border-white/[0.08] rounded-xl p-7 sm:p-11 shadow-lg"
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
@@ -187,11 +188,12 @@ export function ContactForm() {
           <input
             type="text"
             name="firstName"
+            autoComplete="given-name"
             required
             placeholder="Jane"
             value={formData.firstName}
             onChange={handleChange}
-            className="w-full bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 rounded-lg px-4 py-3 text-white text-sm placeholder:text-white/35 focus:border-terracotta focus:ring-1 focus:ring-terracotta/40 focus:bg-white/[0.07] focus:outline-none transition-all"
+            className="w-full bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 rounded-lg px-4 py-3 text-white text-sm placeholder:text-white/35 focus:border-terracotta focus:ring-1 focus:ring-terracotta/40 focus:bg-white/[0.07] focus:outline-none autofill:shadow-[inset_0_0_0px_1000px_#182e54] autofill:[-webkit-text-fill-color:white] transition-all"
           />
         </div>
         <div>
@@ -201,11 +203,12 @@ export function ContactForm() {
           <input
             type="text"
             name="lastName"
+            autoComplete="family-name"
             required
             placeholder="Smith"
             value={formData.lastName}
             onChange={handleChange}
-            className="w-full bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 rounded-lg px-4 py-3 text-white text-sm placeholder:text-white/35 focus:border-terracotta focus:ring-1 focus:ring-terracotta/40 focus:bg-white/[0.07] focus:outline-none transition-all"
+            className="w-full bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 rounded-lg px-4 py-3 text-white text-sm placeholder:text-white/35 focus:border-terracotta focus:ring-1 focus:ring-terracotta/40 focus:bg-white/[0.07] focus:outline-none autofill:shadow-[inset_0_0_0px_1000px_#182e54] autofill:[-webkit-text-fill-color:white] transition-all"
           />
         </div>
       </div>
@@ -217,11 +220,12 @@ export function ContactForm() {
         <input
           type="email"
           name="email"
+          autoComplete="email"
           required
           placeholder="jane@firm.com"
           value={formData.email}
           onChange={handleChange}
-          className="w-full bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 rounded-lg px-4 py-3 text-white text-sm placeholder:text-white/35 focus:border-terracotta focus:ring-1 focus:ring-terracotta/40 focus:bg-white/[0.07] focus:outline-none transition-all"
+          className="w-full bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 rounded-lg px-4 py-3 text-white text-sm placeholder:text-white/35 focus:border-terracotta focus:ring-1 focus:ring-terracotta/40 focus:bg-white/[0.07] focus:outline-none autofill:shadow-[inset_0_0_0px_1000px_#182e54] autofill:[-webkit-text-fill-color:white] transition-all"
         />
       </div>
 
@@ -232,10 +236,11 @@ export function ContactForm() {
         <input
           type="text"
           name="organization"
+          autoComplete="organization"
           placeholder="City of Springfield / Smith Architects"
           value={formData.organization}
           onChange={handleChange}
-          className="w-full bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 rounded-lg px-4 py-3 text-white text-sm placeholder:text-white/35 focus:border-terracotta focus:ring-1 focus:ring-terracotta/40 focus:bg-white/[0.07] focus:outline-none transition-all"
+          className="w-full bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 rounded-lg px-4 py-3 text-white text-sm placeholder:text-white/35 focus:border-terracotta focus:ring-1 focus:ring-terracotta/40 focus:bg-white/[0.07] focus:outline-none autofill:shadow-[inset_0_0_0px_1000px_#182e54] autofill:[-webkit-text-fill-color:white] transition-all"
         />
       </div>
 
@@ -332,7 +337,7 @@ export function ContactForm() {
           placeholder="Brief description of your project, timeline, or inquiry..."
           value={formData.message}
           onChange={handleChange}
-          className="w-full bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 rounded-lg px-4 py-3 text-white text-sm placeholder:text-white/35 focus:border-terracotta focus:ring-1 focus:ring-terracotta/40 focus:bg-white/[0.07] focus:outline-none transition-all resize-y min-h-[120px]"
+          className="w-full bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 rounded-lg px-4 py-3 text-white text-sm placeholder:text-white/35 focus:border-terracotta focus:ring-1 focus:ring-terracotta/40 focus:bg-white/[0.07] focus:outline-none autofill:shadow-[inset_0_0_0px_1000px_#182e54] autofill:[-webkit-text-fill-color:white] transition-all resize-y min-h-[120px]"
         />
       </div>
 
