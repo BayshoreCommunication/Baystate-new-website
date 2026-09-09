@@ -24,7 +24,7 @@ export function CountUp({ value, duration = 1600, className }: CountUpProps) {
           observer.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     if (elementRef.current) {
@@ -86,9 +86,7 @@ export function CountUp({ value, duration = 1600, className }: CountUpProps) {
       <span
         ref={elementRef}
         className={`inline-block transition-all duration-700 ease-out ${
-          hasStarted
-            ? "opacity-100 scale-100"
-            : "opacity-0 scale-50"
+          hasStarted ? "opacity-100 scale-100" : "opacity-0 scale-50"
         } ${className || ""}`}
       >
         {value}
