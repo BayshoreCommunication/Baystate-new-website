@@ -14,9 +14,10 @@ interface BlogCardProps {
 export function BlogCard({ post, featured = false, className }: BlogCardProps) {
   if (featured) {
     return (
-      <article
+      <Link
+        href={`/blog/${post.slug}`}
         className={cn(
-          "group grid grid-cols-1 lg:grid-cols-12 gap-8 bg-warm-white rounded-2xl overflow-hidden border border-warm-gray p-6 sm:p-8 lg:p-10 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-terracotta/40 hover:shadow-[0_16px_48px_rgba(0,0,0,0.1)]",
+          "group grid grid-cols-1 lg:grid-cols-12 gap-8 bg-warm-white rounded-2xl overflow-hidden border border-warm-gray p-6 sm:p-8 lg:p-10 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-terracotta/40 hover:shadow-[0_16px_48px_rgba(0,0,0,0.1)] block cursor-pointer",
           className,
         )}
       >
@@ -50,14 +51,9 @@ export function BlogCard({ post, featured = false, className }: BlogCardProps) {
             </span>
           </div>
 
-          <h3 className="font-serif text-2xl sm:text-3xl text-navy font-normal mb-3.5 leading-snug group-hover:text-terracotta transition-colors">
-            <Link
-              href={`/blog/${post.slug}`}
-              className="flex items-start justify-between gap-2"
-            >
-              <span>{post.title}</span>
-              <ArrowUpRight className="w-6 h-6 shrink-0 opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-200 text-terracotta" />
-            </Link>
+          <h3 className="font-serif text-2xl sm:text-3xl text-navy font-normal mb-3.5 leading-snug group-hover:text-terracotta transition-colors flex items-start justify-between gap-2">
+            <span>{post.title}</span>
+            <ArrowUpRight className="w-6 h-6 shrink-0 opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-200 text-terracotta" />
           </h3>
 
           <p className="text-primary-muted text-sm sm:text-base leading-[1.75] mb-6 line-clamp-3">
@@ -85,14 +81,15 @@ export function BlogCard({ post, featured = false, className }: BlogCardProps) {
             </div>
           </div>
         </div>
-      </article>
+      </Link>
     );
   }
 
   return (
-    <article
+    <Link
+      href={`/blog/${post.slug}`}
       className={cn(
-        "group bg-white rounded-xl overflow-hidden border border-warm-gray transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-terracotta/35 hover:shadow-[0_12px_36px_rgba(0,0,0,0.08)] flex flex-col h-full",
+        "group bg-white rounded-xl overflow-hidden border border-warm-gray transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-terracotta/35 hover:shadow-[0_12px_36px_rgba(0,0,0,0.08)] flex flex-col h-full cursor-pointer",
         className,
       )}
     >
@@ -121,14 +118,9 @@ export function BlogCard({ post, featured = false, className }: BlogCardProps) {
           </span>
         </div>
 
-        <h3 className="font-serif text-xl sm:text-[22px] text-navy font-normal mb-3 leading-snug group-hover:text-terracotta transition-colors">
-          <Link
-            href={`/blog/${post.slug}`}
-            className="flex items-start justify-between gap-2"
-          >
-            <span>{post.title}</span>
-            <ArrowUpRight className="w-5 h-5 shrink-0 opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-200 text-terracotta" />
-          </Link>
+        <h3 className="font-serif text-xl sm:text-[22px] text-navy font-normal mb-3 leading-snug group-hover:text-terracotta transition-colors flex items-start justify-between gap-2">
+          <span>{post.title}</span>
+          <ArrowUpRight className="w-5 h-5 shrink-0 opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-200 text-terracotta" />
         </h3>
 
         <p className="text-primary-muted text-sm leading-[1.7] mb-6 line-clamp-2">
@@ -156,6 +148,6 @@ export function BlogCard({ post, featured = false, className }: BlogCardProps) {
           </div>
         </div>
       </div>
-    </article>
+    </Link>
   );
 }
