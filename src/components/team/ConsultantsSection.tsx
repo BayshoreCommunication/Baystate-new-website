@@ -4,7 +4,11 @@ import Link from "next/link";
 import { Container } from "@/components/common/Container";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { ScrollReveal } from "@/components/common/ScrollReveal";
-import { consultantsData } from "@/data/team";
+import {
+  consultantsData,
+  extendedTeamIntro,
+  couldBeYou,
+} from "@/data/team";
 
 export function ConsultantsSection() {
   return (
@@ -12,9 +16,9 @@ export function ConsultantsSection() {
       <Container>
         <ScrollReveal>
           <SectionHeading
-            label="Our Consultants"
-            title="The Extended Team"
-            description="Baystate works with a network of trusted planning professionals and specialists — each brought in for their specific expertise to deliver the best outcomes for our clients."
+            label="Specialists & Collaborators"
+            title={extendedTeamIntro.title}
+            description={extendedTeamIntro.description}
           />
         </ScrollReveal>
 
@@ -60,23 +64,21 @@ export function ConsultantsSection() {
             </ScrollReveal>
           ))}
 
-          {/* Join as a Consultant CTA Card */}
+          {/* Could Be You Card */}
           <ScrollReveal delay={300} className="h-full">
             <div className="h-full bg-navy rounded-xl p-7 flex flex-col justify-center text-white border border-white/10 transition-all duration-300 ease-out hover:-translate-y-1 hover:border-terracotta/40 hover:shadow-[0_16px_40px_rgba(0,0,0,0.25)]">
               <div className="text-4xl mb-5">🤝</div>
               <h3 className="font-serif text-2xl text-white font-normal mb-3 leading-[1.2]">
-                Could be you.
+                {couldBeYou.title}
               </h3>
-              <p className="text-sm text-white/50 leading-[1.7] mb-7 font-light max-w-xs">
-                We&apos;re always looking for talented planners and consultants
-                to collaborate with. If you share our values, we&apos;d love to
-                talk.
+              <p className="text-sm text-white/60 leading-[1.7] mb-7 font-light max-w-xs">
+                {couldBeYou.description}
               </p>
               <Link
-                href="/#contact"
-                className="bg-terracotta hover:bg-terracotta-light text-white px-6 py-3 rounded-md text-[13px] font-medium transition-colors"
+                href={couldBeYou.ctaHref}
+                className="bg-terracotta hover:bg-terracotta-light text-white px-6 py-3 rounded-md text-[13px] font-medium transition-colors inline-block text-center"
               >
-                Get In Touch
+                {couldBeYou.ctaText}
               </Link>
             </div>
           </ScrollReveal>

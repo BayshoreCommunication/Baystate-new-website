@@ -41,12 +41,15 @@ export function FounderSection() {
 
           {/* Founder Details */}
           <ScrollReveal delay={120} className="pt-2">
-            <h2 className="font-serif text-3xl sm:text-4xl text-navy font-normal mb-1.5 leading-[1.1]">
+            <h2 className="font-serif text-3xl sm:text-4xl text-navy font-normal mb-1 leading-[1.1]">
               {founderData.name}
             </h2>
 
-            <div className="text-sm text-terracotta font-medium tracking-[0.06em] uppercase mb-7">
+            <div className="text-sm text-terracotta font-medium tracking-[0.06em] uppercase mb-1">
               {founderData.title}
+            </div>
+            <div className="text-xs text-primary-muted uppercase tracking-[0.05em] mb-7">
+              {founderData.subtitle}
             </div>
 
             <div className="space-y-4 text-primary-muted text-base leading-[1.8]">
@@ -55,20 +58,16 @@ export function FounderSection() {
               ))}
             </div>
 
-            {/* Expertise Tags */}
-            <div className="flex flex-wrap gap-2 my-7">
-              {founderData.expertise.map((tag, idx) => (
-                <span
-                  key={idx}
-                  className="text-xs font-medium text-navy bg-warm-white border border-warm-gray px-3.5 py-1.5 rounded-full tracking-[0.03em]"
-                >
-                  {tag}
-                </span>
-              ))}
+            {/* Background Note */}
+            <div className="p-4 bg-warm-white rounded-lg border-l-2 border-terracotta my-7 text-sm text-primary-text leading-relaxed">
+              {founderData.backgroundNote}
             </div>
 
             {/* Credentials List */}
             <div className="flex flex-col gap-2.5 mt-8">
+              <h3 className="text-xs font-semibold text-navy tracking-[0.08em] uppercase mb-1">
+                Prior Public &amp; Regional Experience:
+              </h3>
               {founderData.credentials.map((cred, idx) => (
                 <div
                   key={idx}
@@ -76,7 +75,7 @@ export function FounderSection() {
                 >
                   <span className="text-lg mt-0.5">{cred.icon}</span>
                   <div>
-                    <div className="text-xs font-semibold text-navy tracking-[0.04em] uppercase">
+                    <div className="text-xs font-semibold text-navy tracking-[0.03em]">
                       {cred.org}
                     </div>
                     <div className="text-[13px] text-primary-muted mt-0.5">

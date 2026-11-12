@@ -11,7 +11,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <ul className="hidden lg:flex items-center gap-7 xl:gap-8 list-none m-0 p-0">
+    <ul className="hidden xl:flex items-center gap-6 2xl:gap-7 list-none m-0 p-0">
       {mainNavItems.map((item) => {
         if (item.isCta) {
           return (
@@ -47,11 +47,11 @@ export function Navbar() {
               </Link>
 
               {/* Dropdown Menu */}
-              <div className="absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-[300px] bg-white rounded-xl p-2 shadow-[0_16px_48px_rgba(0,0,0,0.18)] opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div className="absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-[330px] bg-white rounded-xl p-2.5 shadow-[0_16px_48px_rgba(0,0,0,0.18)] opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-50 pointer-events-none group-hover:pointer-events-auto">
                 {/* Arrow Pointer */}
                 <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-0 h-0 border-x-[7px] border-x-transparent border-b-[7px] border-b-white" />
 
-                <div className="flex flex-col gap-0.5">
+                <div className="flex flex-col gap-0.5 max-h-[420px] overflow-y-auto">
                   {serviceDropdownItems.map((subItem) => (
                     <React.Fragment key={subItem.href}>
                       <Link

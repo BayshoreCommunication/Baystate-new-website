@@ -30,25 +30,23 @@ export function Hero() {
       <div className="relative z-10 max-w-[860px]">
         <div className="inline-flex items-center gap-3 text-terracotta text-[11px] font-medium tracking-[0.22em] uppercase mb-6 sm:mb-7 animate-hero-1">
           <span className="w-9 h-[1px] bg-terracotta block" />
-          <span>{siteConfig.tagline}</span>
+          <span>{siteConfig.name}</span>
         </div>
 
         <h1 className="font-serif text-[42px] sm:text-[60px] lg:text-[76px] xl:text-[84px] text-white leading-[1.08] font-normal mb-6 sm:mb-7 animate-hero-2">
-          We Plan with <em className="text-terracotta italic">Purpose,</em>
-          <br />
-          and People in Mind.
+          Plans your community <em className="text-terracotta italic">can use</em>
         </h1>
 
-        <p className="text-white/60 text-base font-light max-w-[520px] leading-[1.75] mb-9 sm:mb-11 animate-hero-3">
+        <p className="text-white/70 text-base sm:text-lg font-light max-w-[620px] leading-[1.75] mb-9 sm:mb-11 animate-hero-3">
           {siteConfig.heroSubheading}
         </p>
 
         <div className="flex flex-wrap items-center gap-4 sm:gap-5 animate-hero-4">
-          <Button href="#services" variant="primary">
-            Explore Our Services
+          <Button href="#contact" variant="primary">
+            Let&apos;s Talk
           </Button>
-          <Button href="#about" variant="ghost">
-            Meet Our Founder
+          <Button href="#services" variant="ghost">
+            Explore Our Services
           </Button>
         </div>
       </div>

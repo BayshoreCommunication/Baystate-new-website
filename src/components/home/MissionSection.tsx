@@ -5,7 +5,7 @@ import { Button } from "@/components/common/Button";
 export function MissionSection() {
   return (
     <section id="mission" className="py-20 sm:py-24 bg-white text-center">
-      <div className="max-w-[780px] mx-auto px-6">
+      <div className="max-w-[820px] mx-auto px-6">
         <ScrollReveal>
           <div className="inline-flex items-center justify-center gap-2.5 text-[11px] font-medium tracking-[0.2em] uppercase mb-4 text-terracotta">
             <span className="w-6 h-[1px] bg-terracotta block" />
@@ -15,21 +15,33 @@ export function MissionSection() {
 
           <div className="w-[50px] h-[2px] bg-terracotta mx-auto mb-9" />
 
-          <p className="font-serif italic text-2xl sm:text-3xl lg:text-[38px] text-navy font-normal leading-[1.4] mb-7">
-            &ldquo;To shape communities that are sustainable, inclusive, and
-            resilient — where people of all ages, incomes, and backgrounds can
-            thrive.&rdquo;
-          </p>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[42px] text-navy font-normal leading-[1.25] mb-8">
+            Plan with Confidence.
+          </h2>
 
-          <p className="text-primary-muted text-base leading-[1.8] mb-9 font-normal">
-            We partner with municipalities, nonprofits, and private
-            organizations to navigate complex planning challenges with clarity
-            and creativity. By combining technical expertise with authentic
-            community engagement, we deliver practical solutions that balance
-            growth, equity, and environmental stewardship.
-          </p>
+          <div className="space-y-6 text-primary-muted text-base sm:text-lg leading-[1.8] text-left sm:text-center font-normal mb-10">
+            <p>
+              Baystate Planning &amp; Consulting Group is a US-based planning
+              consultancy. We work with local governments, nonprofits, and
+              partners so communities of every size, in every region, can plan
+              with confidence.
+            </p>
+            <p>
+              We believe local leaders speak best for their communities when they
+              have the right tools. Our capacity building gives staff, planning
+              commissions, and elected officials the data, training, and
+              guidance to make strong decisions for residents, workers, and
+              local business owners.
+            </p>
+            <p>
+              Our team investigates the complex issues your community faces and
+              delivers solutions in simpler terms. We turn detailed research into
+              accessible documents that residents can follow and local boards can
+              act on in time.
+            </p>
+          </div>
 
-          <Button href="#contact" variant="primary">
+          <Button href="/#contact" variant="primary">
             Work With Us
           </Button>
         </ScrollReveal>

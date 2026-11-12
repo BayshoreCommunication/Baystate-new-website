@@ -5,160 +5,188 @@ import {
   OpenRole,
 } from '@/types/team';
 
+export const teamPageConfig = {
+  title: 'Meet Our Team',
+  metaDescription:
+    'Meet the Baystate Planning team of planners and policy specialists serving communities nationwide on housing, zoning, climate resilience, and grants.',
+  heading: 'Every zoning line and housing policy shapes where real people live',
+  subheading: 'Our planners and policy specialists never lose sight of that.',
+};
+
 export const founderData = {
   name: 'Jasifa Chowdhury',
-  title:
-    'Founder & Principal Planner · Urban Planner & Housing Policy Specialist',
+  title: 'Founder and Principal Planner',
+  subtitle: 'Urban Planner and Housing Policy Specialist',
   badgeNum: '10+',
   badgeLabel: 'Years in\nPlanning',
   image:
     'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
   bio: [
-    'Jasifa Chowdhury founded Baystate Planning & Consulting to bring high-quality, equitable planning expertise to municipalities, nonprofits, and communities that need it most. With over 10 years of cross-sector experience in municipal, regional, and international planning, she has built a reputation for translating complex policy into actionable plans.',
-    'Her work spans affordable housing policy, zoning and land use strategy, climate resilience, federal and state grant writing, and community engagement — across scales from individual neighborhoods to entire regions.',
-    'Jasifa is known for her ability to bridge technical expertise with authentic community engagement — delivering solutions that are both rigorous and human-centered.',
+    'Jasifa founded Baystate Planning & Consulting Group to help communities plan for stable housing and strong neighborhoods. She has more than 10 years of experience working with families, local leaders, and public agencies. She turns dense regulations into practical tools that staff and residents can use.',
+    'Her work covers affordable housing policy, land use strategy, climate resilience, and federal grant writing. Whether she is studying a single city block or a multi-county region, she builds recommendations on solid data and genuine community needs.',
+    'Jasifa combines technical expertise with direct community engagement. She works alongside clients to deliver solutions that serve residents and protect the environment.',
   ],
+  backgroundNote:
+    'Her background spans civil engineering and urban planning, and her work covers affordable housing, zoning and land use strategy, climate resilience, and grant writing.',
   expertise: [
     'Affordable Housing Policy',
-    'Zoning & Land Use',
+    'Zoning & Land Use Strategy',
     'Climate Resilience',
-    'Grant Writing',
-    'GIS & Spatial Analysis',
+    'Federal & State Grant Writing',
+    'Civil Engineering Background',
     'Community Engagement',
-    'HUD/FHA Compliance',
-    'International Planning',
+    'HUD & Fair Housing Compliance',
+    'Housing Authority Operations',
   ],
   credentials: [
     {
       icon: '🏛️',
       org: 'Central Massachusetts Regional Planning Commission',
-      role: 'Regional Planning — Municipal & Land Use Strategy',
+      role: 'Regional planning leadership',
     },
     {
       icon: '🏘️',
       org: 'Cambridge Housing Authority',
-      role: 'Affordable Housing Policy & Compliance',
+      role: 'Affordable housing policy',
     },
     {
       icon: '🏙️',
-      org: 'City of Cambridge — Dept. of Housing & Community Development',
-      role: 'Community Development Strategy & Policy',
+      org: 'City of Cambridge Department of Housing and Community Development',
+      role: 'Community development strategy',
     },
     {
       icon: '🏠',
       org: 'Vernon Housing Authority',
-      role: 'Housing Authority Operations & Planning',
+      role: 'Housing authority operations',
+    },
+    {
+      icon: '🌴',
+      org: 'City of Tampa',
+      role: 'Local government experience',
     },
   ] as CredentialItem[],
 };
 
 export const consultantsData: ExtendedConsultant[] = [
   {
-    name: 'Marcus Chen',
+    name: 'Marcus',
     roleBadge: 'Senior Consultant',
-    specialty: 'Urban Planning & GIS',
-    bio: 'Specializes in spatial analysis, zoning reform, and comprehensive plan mapping. Former regional planner with 8+ years of municipal experience.',
-    tags: ['GIS & Mapping', 'Zoning Reform', 'Comp Plans'],
+    specialty: 'Spatial Analysis & Mapping',
+    bio: 'Marcus brings 8 years of municipal experience to spatial analysis and mapping. He knows a single zoning line can decide where a corner store, a bus stop, or new housing can go. His maps give boards and planners a fair basis for land use decisions.',
+    tags: ['Spatial Analysis', 'GIS & Mapping', 'Zoning Decisions'],
     image:
       'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80',
   },
   {
-    name: 'Amara Williams',
+    name: 'Amara',
     roleBadge: 'Housing Specialist',
-    specialty: 'Housing Policy & Grants',
-    bio: 'Expert in affordable housing financing, HUD programs, and CDBG/HOME grant management. Background in community development and housing authority operations.',
-    tags: ['HUD Programs', 'Grant Writing', 'CDBG / HOME'],
+    specialty: 'Housing Authority Operations & Programs',
+    bio: 'Amara has deep experience in housing authority operations. She cuts through administrative delays and helps agencies put available funding to work. She works to get federal and state housing programs to the families they were designed to serve.',
+    tags: ['Housing Authority', 'Federal Programs', 'Funding Operations'],
     image:
       'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80',
   },
   {
-    name: 'Daniel Osei',
-    roleBadge: 'Tech & Software',
-    specialty: 'GovTech & Software Development',
-    bio: 'Builds civic technology for municipalities and housing authorities. Expert in permitting portals, housing dashboards, and government data systems.',
-    tags: ['Civic Tech', 'Dashboards', 'Gov Portals'],
+    name: 'Daniel',
+    roleBadge: 'Civic Technology',
+    specialty: 'Public Technology & Portals',
+    bio: 'Daniel helps public offices and residents connect through better technology. He builds simple portals and data tools so local governments can respond to residents faster and with less friction.',
+    tags: ['Civic Tech', 'Public Portals', 'Data Tools'],
     image:
       'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80',
   },
   {
-    name: 'Sofia Reyes',
+    name: 'Sofia',
     roleBadge: 'Senior Consultant',
-    specialty: 'Climate & Resilience Planning',
-    bio: 'Climate vulnerability specialist with expertise in resilience planning, BRIC/HMGP grants, and environmental justice frameworks for frontline communities.',
-    tags: ['Climate Resilience', 'BRIC / HMGP', 'Env. Justice'],
+    specialty: 'Climate Resilience & Vulnerability',
+    bio: 'Sofia supports communities most exposed to climate change. She designs resilience strategies and pursues grant funding that helps vulnerable neighborhoods prepare for flooding, heat, and storms.',
+    tags: ['Climate Resilience', 'Grant Funding', 'Vulnerability Strategy'],
     image:
       'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=500&q=80',
   },
   {
-    name: 'James Okafor',
-    roleBadge: 'International',
-    specialty: 'International Development',
-    bio: 'International planning consultant with deep experience in Sub-Saharan Africa and Southeast Asia. Specializes in informal settlement upgrading and SDG-aligned urban strategy.',
-    tags: ['Global Dev', 'SDG 11', 'Settlement Upgrading'],
+    name: 'James',
+    roleBadge: 'International Planning',
+    specialty: 'International Planning & Settlement Upgrading',
+    bio: 'James has led planning work from Southeast Asia to Sub-Saharan Africa. He works directly with residents to upgrade informal settlements, building strategies that respect local culture and give communities a voice in how they grow.',
+    tags: ['Settlement Upgrading', 'Global Strategy', 'Community Voice'],
     image:
       'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80',
   },
 ];
+
+export const couldBeYou = {
+  title: 'Could Be You',
+  description:
+    'We are always looking for people who care about communities and want to do the work well. If that sounds like you, let’s talk.',
+  ctaText: 'Let’s Talk',
+  ctaHref: '/#contact',
+};
+
+export const extendedTeamIntro = {
+  title: 'The Extended Team',
+  description:
+    'Every community has people working to solve its own planning challenges. We bring together specialists who know that a good plan matters only when it’s carried out. They stay close to the communities they serve and see projects through.',
+};
 
 export const companyValues: CompanyValue[] = [
   {
     icon: '⚖️',
     title: 'Equity First',
     description:
-      'Every plan we write considers who benefits and who has historically been left out. Equitable outcomes aren’t a checkbox — they’re the goal.',
+      'In many communities, working families, older adults, and people with disabilities can’t find a home they can afford. We begin housing work with that gap and the households it leaves out.',
   },
   {
     icon: '🎯',
     title: 'Technical Rigor',
     description:
-      'We back every recommendation with data, policy analysis, and professional expertise. Our work holds up to scrutiny because we do the homework.',
+      'We build on local parcel data, U.S. Census data, and the text of the laws that govern your community. Every figure in a plan traces to a source a board member can check.',
   },
   {
     icon: '🤝',
     title: 'Authentic Engagement',
     description:
-      'Community voices shape the best plans. We design engagement that actually reaches people — not just those who already show up to public meetings.',
+      'We run meetings and surveys in the languages your residents speak. We schedule them at hours when renters and shift workers can attend.',
   },
   {
     icon: '💡',
-    title: 'Creative Problem-Solving',
+    title: 'Creative Problem Solving',
     description:
-      'We’re known for finding solutions that others miss. Complex challenges call for out-of-the-box thinking grounded in real-world experience.',
+      'Some cases don’t fit the standard code. We use overlay districts, incentive zoning, and special permits to solve them, drawing on experience from housing authorities and regional planning.',
   },
   {
     icon: '🌱',
     title: 'Long-Term Thinking',
     description:
-      'The decisions we help make today shape communities for decades. We plan with that weight in mind — and with optimism about what’s possible.',
+      'We test plans against local hazard and climate risks and 20- to 30-year growth scenarios.',
   },
   {
     icon: '🔗',
     title: 'Partnership',
     description:
-      'We don’t hand over a report and disappear. We work alongside our clients as true partners — sharing knowledge and building capacity along the way.',
+      'We train planning commissions, elected officials, and housing staff to run what we build, from GIS maps to housing trust procedures. Your team owns the work when we finish.',
   },
 ];
 
 export const openRoles: OpenRole[] = [
   {
-    title: 'Urban Planner — Housing & Zoning',
-    type: 'Part-time / Project-based · Remote',
+    title: 'Urban Planner for Housing and Zoning',
+    type: 'Part-time and project-based work. Remote.',
     status: 'Open',
   },
   {
     title: 'GIS Analyst',
-    type: 'Freelance / Contract · Remote',
+    type: 'Freelance and contract work. Remote.',
     status: 'Open',
   },
   {
-    title: 'Grant Writer — Housing & Community Development',
-    type: 'Part-time / Contract · Remote',
+    title: 'Grant Writer for Housing and Community Development',
+    type: 'Part-time and contract work. Remote.',
     status: 'Open',
   },
   {
     title: 'International Planning Consultant',
-    type: 'Project-based · Remote',
+    type: 'Project-based work. Remote.',
     status: 'Open',
   },
 ];
-

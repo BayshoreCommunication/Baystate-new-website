@@ -9,7 +9,10 @@ import { ServiceAudiences } from "@/components/services/ServiceAudiences";
 import { ServiceProcess } from "@/components/services/ServiceProcess";
 import { ServiceFunding } from "@/components/services/ServiceFunding";
 import { CtaBand } from "@/components/common/CtaBand";
+import { Container } from "@/components/common/Container";
+import { ScrollReveal } from "@/components/common/ScrollReveal";
 import { siteConfig } from "@/data/site";
+import { ShieldCheck } from "lucide-react";
 
 interface ServicePageProps {
   params: {
@@ -18,13 +21,25 @@ interface ServicePageProps {
 }
 
 export function generateStaticParams() {
-  return servicesData.map((service) => ({
-    slug: service.slug,
-  }));
+  const slugs = servicesData.map((s) => ({ slug: s.slug }));
+  // Add legacy slugs for backwards compatibility
+  slugs.push({ slug: "grant-writing" });
+  slugs.push({ slug: "govtech-software" });
+  return slugs;
+}
+
+function resolveService(slug: string) {
+  if (slug === "grant-writing") {
+    return servicesData.find((s) => s.slug === "grants-funding");
+  }
+  if (slug === "govtech-software") {
+    return servicesData.find((s) => s.slug === "government-technology");
+  }
+  return servicesData.find((s) => s.slug === slug);
 }
 
 export function generateMetadata({ params }: ServicePageProps): Metadata {
-  const service = servicesData.find((s) => s.slug === params.slug);
+  const service = resolveService(params.slug);
 
   if (!service) {
     return {
@@ -34,18 +49,20 @@ export function generateMetadata({ params }: ServicePageProps): Metadata {
 
   return {
     title: `${service.title} — ${siteConfig.name}`,
-    description: service.heroDescription,
+    description: service.metaDescription || service.heroDescription,
   };
 }
 
 export default function ServiceDetailPage({ params }: ServicePageProps) {
-  const service = servicesData.find((s) => s.slug === params.slug);
+  const service = resolveService(params.slug);
 
   if (!service) {
     notFound();
   }
 
-  const isGovTech = service.slug === "govtech-software";
+  const isGovTech =
+    service.slug === "government-technology" ||
+    service.slug === "govtech-software";
 
   return (
     <main>
@@ -56,7 +73,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
           { label: service.title },
         ]}
         eyebrow={service.eyebrow}
-        title={service.title}
+        title={service.heroHeading || service.title}
         description={service.heroDescription}
         bgImage={service.heroImage}
       />
@@ -69,7 +86,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
         imageAlt={service.overview.imageAlt}
       />
 
-      {/* For GovTech, Audiences comes before Included */}
+      {/* For GovTech: Detailed Audiences Cards */}
       {isGovTech && service.audienceCards && (
         <ServiceAudiences
           sectionLabel={service.audienceCards.sectionLabel}
@@ -78,7 +95,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
         />
       )}
 
-      {/* What's Included Section */}
+      {/* Services Included */}
       {service.included && (
         <ServiceIncluded
           sectionLabel={service.included.sectionLabel}
@@ -88,7 +105,48 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
         />
       )}
 
-      {/* Funding Sources Section (e.g. Grant Writing) */}
+      {/* Optional Narrative Block */}
+      {service.narrativeBlock && (
+        <section className="py-16 sm:py-20 bg-navy text-white border-t border-white/[0.08]">
+          <Container>
+            <div className="max-w-[800px] mx-auto text-center">
+              <ScrollReveal>
+                <h3 className="font-serif text-2xl sm:text-3xl font-normal mb-5">
+                  {service.narrativeBlock.heading}
+                </h3>
+                <div className="space-y-4 text-white/70 text-sm sm:text-base leading-[1.8]">
+                  {service.narrativeBlock.paragraphs.map((p, idx) => (
+                    <p key={idx}>{p}</p>
+                  ))}
+                </div>
+              </ScrollReveal>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Conflict of Interest Commitment (e.g. RFP and Procurement) */}
+      {service.conflictCommitment && (
+        <section className="py-16 bg-white border-t border-warm-gray">
+          <Container>
+            <div className="max-w-[800px] mx-auto bg-warm-white p-8 sm:p-10 rounded-xl border-l-4 border-terracotta shadow-xs">
+              <ScrollReveal>
+                <div className="flex items-center gap-3 text-terracotta mb-3">
+                  <ShieldCheck className="w-6 h-6" />
+                  <h3 className="font-serif text-2xl text-navy font-normal">
+                    {service.conflictCommitment.heading}
+                  </h3>
+                </div>
+                <p className="text-primary-muted text-base leading-[1.8]">
+                  {service.conflictCommitment.description}
+                </p>
+              </ScrollReveal>
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Funding Sources Section */}
       {service.fundingSources && (
         <ServiceFunding
           sectionLabel={service.fundingSources.sectionLabel}
@@ -97,7 +155,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
         />
       )}
 
-      {/* Who It's For Section (Standard Services) */}
+      {/* Audiences Section for standard services */}
       {!isGovTech && service.audiences && (
         <ServiceAudiences
           sectionLabel={service.audiences.sectionLabel}
@@ -106,7 +164,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
         />
       )}
 
-      {/* How We Work / Process Section */}
+      {/* Process Section */}
       {service.process && (
         <ServiceProcess
           sectionLabel={service.process.sectionLabel}
@@ -116,7 +174,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
         />
       )}
 
-      {/* CTA Band */}
+      {/* Call to Action Band */}
       <CtaBand
         heading={service.cta.heading}
         description={service.cta.description}

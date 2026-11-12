@@ -12,7 +12,7 @@ export function ValuesSection() {
           <SectionHeading
             label="What Drives Us"
             title="Our Values"
-            description="These aren't aspirational words on a wall — they're the principles that shape how we work with every client and every community."
+            description="These principles guide how we work with clients, residents, and partners."
             isDark
           />
         </ScrollReveal>
@@ -27,7 +27,7 @@ export function ValuesSection() {
                 <h3 className="font-serif text-[22px] text-white font-normal mb-3 transition-colors group-hover:text-white">
                   {val.title}
                 </h3>
-                <p className="text-sm text-white/50 leading-[1.7]">
+                <p className="text-sm text-white/60 leading-[1.7]">
                   {val.description}
                 </p>
               </div>

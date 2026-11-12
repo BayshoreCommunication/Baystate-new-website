@@ -6,7 +6,7 @@ import { openRoles } from "@/data/team";
 
 export function JoinSection() {
   return (
-    <section className="py-20 sm:py-24 bg-warm-white">
+    <section id="join" className="py-20 sm:py-24 bg-warm-white">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column: Roles list */}
@@ -17,19 +17,19 @@ export function JoinSection() {
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[42px] text-navy font-normal leading-[1.2] mb-5">
-              Join the Baystate Team
+              Join the Baystate team
             </h2>
 
             <p className="text-primary-muted text-base leading-[1.8] mb-4">
-              We&apos;re a growing firm working on meaningful planning
-              challenges across housing, climate, community development, and
-              technology. We&apos;re always looking for talented planners and
-              consultants who share our values.
+              We are a growing team working on housing, climate, community
+              growth, and technology. We look for talented planners and
+              consultants who share our commitment to practical,
+              community-centered work.
             </p>
 
             <p className="text-primary-muted text-base leading-[1.8] mb-8">
               We work with experienced professionals, emerging planners, and
-              specialized consultants on a project and retainer basis.
+              specialists on project and retainer terms.
             </p>
 
             <div className="flex flex-col gap-3.5">
@@ -58,11 +58,10 @@ export function JoinSection() {
               <h3 className="font-serif text-2xl sm:text-[28px] font-normal mb-3.5 leading-[1.2]">
                 Don&apos;t See Your Role? Let&apos;s Talk.
               </h3>
-              <p className="text-white/55 text-[15px] leading-[1.7] mb-7 font-light">
-                We&apos;re open to conversations with planners, policy analysts,
-                and specialists who bring expertise we don&apos;t yet have
-                in-house. Send us a note about your background and what
-                you&apos;re looking for.
+              <p className="text-white/60 text-[15px] leading-[1.7] mb-7 font-light">
+                We welcome conversations with planners, policy analysts, and
+                specialists whose skills are not yet on our team. Send us a short
+                note about your background and the work you want to do.
               </p>
               <Button href="/#contact" variant="terra">
                 Send Us a Note

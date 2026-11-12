@@ -7,25 +7,28 @@ export const servicesData: ServiceItem[] = [
     icon: '🏙️',
     iconName: 'Building2',
     eyebrow: 'Service',
+    metaDescription:
+      'Baystate Planning writes comprehensive, housing, resilience, and long-range plans that cities, counties, and towns can adopt and use.',
+    heroHeading: 'Long-range plans shaped with your residents',
     heroDescription:
-      'Strategic, long-range plans that guide growth, housing, transportation, and resilience — built with and for the communities they serve.',
+      'We write plans for growth, housing, transportation, and resilience, working with the residents of each community.',
     heroImage:
       'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1600&q=80',
     shortDescription:
-      'Strategic plans that guide long-term growth, housing, transportation, and climate resilience across your community.',
+      'Comprehensive plans, long-range plans, housing plans, and climate resilience plans, with an implementation table that names owners, costs, and timelines.',
     tags: [
       'Comprehensive Plans',
-      'Long Range Plans',
+      'Long-Range Plans',
       'Housing Plans',
-      'Climate Resilience',
+      'Resilience & Mitigation',
     ],
     overview: {
       badgeLabel: 'Overview',
       heading: 'Plans That Actually Get Used',
       paragraphs: [
-        'Community planning is more than a document — it’s a roadmap that shapes how a place grows, changes, and responds to challenges over decades. At Baystate, we create plans that are grounded in data, shaped by genuine community engagement, and built to guide real decisions.',
-        'With experience across municipal, regional, and state-level planning, our founder Jasifa Chowdhury has led comprehensive planning processes at the Central Massachusetts Regional Planning Commission and for multiple municipalities — resulting in adopted plans that communities actually implement.',
-        'We combine technical rigor with approachable, inclusive community engagement so that every plan reflects the voices of the people it affects most.',
+        'We write plans built for daily use. A Baystate plan answers the questions boards ask every month. Where can housing go? Which roads need work first? What does the community do about flood risk? Each recommendation names an owner, a cost, and a timeline.',
+        'Jasifa Chowdhury brings years of municipal, regional, and state planning experience to this work, including complete planning processes for a regional planning commission.',
+        'Every recommendation rests on accurate data, and every plan is shaped by public input. Boards get a document they can adopt, cite in decisions, and use to support grant applications.',
       ],
       image:
         'https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?auto=format&fit=crop&w=800&q=80',
@@ -38,464 +41,548 @@ export const servicesData: ServiceItem[] = [
         {
           icon: '📋',
           iconName: 'FileText',
-          title: 'Comprehensive Plans',
+          title: 'Comprehensive and Master Plans',
           description:
-            'Full municipal master plans covering land use, housing, transportation, open space, economic development, and public utilities with a long-range vision.',
+            'We prepare comprehensive plans, also known as master plans or general plans, that set a long-term direction for land use, housing, economic development, natural resources, open space, facilities, and transportation. Shaped by resident input and local data, each plan gives boards and staff a practical guide for decisions, investments, and funding applications.',
         },
         {
           icon: '🏠',
           iconName: 'Home',
           title: 'Housing Plans',
           description:
-            'Housing production plans, Affordable Housing Trust plans, and housing needs assessments aligned with state and regional housing goals.',
+            'We write housing plans, housing trust strategies, and needs assessments designed to meet state and local requirements.',
         },
         {
           icon: '🗺️',
           iconName: 'Map',
-          title: 'Long Range Plans',
+          title: 'Long-Range Plans',
           description:
-            '20–30 year visioning documents that establish a clear direction for community growth, infrastructure investment, and land use priorities.',
+            'We prepare visions and growth scenarios that look 20 to 30 years ahead. Each one sets land use priorities, infrastructure investments, and phasing your boards can act on.',
         },
         {
           icon: '🌱',
           iconName: 'Leaf',
-          title: 'Climate Action & Resilience Plans',
+          title: 'Climate Action and Resilience Plans',
           description:
-            'Municipal climate action plans, vulnerability assessments, and resilience strategies aligned with state climate mandates and FEMA frameworks.',
+            'We deliver climate action plans, vulnerability assessments, and resilience strategies that align with state programs and federal frameworks.',
+        },
+        {
+          icon: '🛡️',
+          iconName: 'ShieldAlert',
+          title: 'Hazard Mitigation and Disaster Recovery',
+          description:
+            'We prepare local hazard mitigation plans designed to meet FEMA requirements, assess risks to homes and critical facilities, and identify projects that reduce future damage. After a disaster, we help communities set recovery priorities, pursue funding, and rebuild with stronger housing and infrastructure.',
         },
         {
           icon: '🚌',
           iconName: 'Bus',
-          title: 'Transportation & Mobility Plans',
+          title: 'Transportation and Mobility Plans',
           description:
-            'Complete streets plans, transit access studies, bike/pedestrian master plans, and mobility frameworks that connect people to opportunity.',
+            'We prepare complete streets policies, prioritization plans, transit studies, and pedestrian and bike networks that can support state and federal funding applications.',
         },
         {
           icon: '💼',
           iconName: 'Briefcase',
           title: 'Economic Development Plans',
           description:
-            'Community economic development strategies, downtown revitalization plans, and business district studies that drive inclusive local growth.',
+            'We write downtown revitalization strategies, business district studies, and local economic plans. Each one includes market data, a project list, and funding sources.',
         },
-      ],
-    },
-    audiences: {
-      sectionLabel: "Who It's For",
-      heading: 'We Work With',
-      items: [
-        { icon: '🏛️', iconName: 'Landmark', label: 'Municipalities & Towns' },
-        { icon: '🌐', iconName: 'Globe', label: 'Regional Planning Agencies' },
-        { icon: '🤝', iconName: 'Users', label: 'Nonprofits & CDCs' },
-        { icon: '🏗️', iconName: 'Building', label: 'Developers & Architects' },
+        {
+          icon: '👥',
+          iconName: 'Users',
+          title: 'Public Engagement',
+          description:
+            'We design surveys, workshops, focus groups, public meetings, and multilingual outreach that reach residents, business owners, and community groups, including those who rarely attend meetings. We then report what we hear plainly, so decision makers can see how community input shaped the final plan.',
+        },
       ],
     },
     process: {
       sectionLabel: 'Our Approach',
       heading: 'How We Work',
       intro:
-        'Every planning engagement follows a structured, transparent process that keeps stakeholders informed and communities empowered.',
+        'Every planning process follows a straight and honest course. Residents stay informed, and the community keeps control from the first meeting to the final vote.',
       steps: [
         {
           stepNum: '01',
-          title: 'Discovery & Assessment',
+          title: 'Discovery and Assessment',
           description:
-            'We review existing plans, data, and policies — and listen to understand your community’s unique context and priorities.',
+            'We review existing plans, codes, data, and recent board decisions. We also interview staff, board members, and local organizations to set priorities.',
         },
         {
           stepNum: '02',
           title: 'Community Engagement',
           description:
-            'Public meetings, surveys, focus groups, and multilingual outreach to capture a full range of community voices.',
+            'We hold public meetings, run surveys, and convene focus groups. We provide outreach in the languages your residents speak and meet them at times and places that work for working families.',
         },
         {
           stepNum: '03',
-          title: 'Analysis & Drafting',
+          title: 'Analysis and Drafting',
           description:
-            'Data analysis, scenario modeling, and draft plan development — with regular check-ins and board presentations.',
+            'We analyze the data, test growth scenarios, and write the draft in stages. We present to your planning commission and elected officials at set points so there are no surprises at adoption.',
         },
         {
           stepNum: '04',
-          title: 'Adoption & Implementation',
+          title: 'Adoption and Implementation',
           description:
-            'We support the full adoption process and provide an implementation roadmap so the plan drives real action.',
+            'We guide the plan through adoption and prepare an implementation table with responsible parties, timelines, and funding sources.',
         },
       ],
     },
     cta: {
-      heading: 'Ready to Start Your Community Plan?',
+      heading: 'Ready to Plan for Your Community?',
       description:
-        'Let’s talk about your community’s goals and how Baystate can help you get there.',
-      buttonText: 'Get In Touch',
+        'Let’s turn your community’s goals into an adoptable, funded, and actionable plan.',
+      buttonText: 'Let’s Talk',
       buttonHref: '/#contact',
     },
   },
   {
     slug: 'housing-community-development',
-    title: 'Housing & Community Development',
-    icon: '🏘️',
+    title: 'Housing and Community Development',
+    icon: '🏠',
     iconName: 'Home',
     eyebrow: 'Service',
+    metaDescription:
+      'Baystate Planning supports communities, nonprofits, and builders nationwide with affordable housing policy, housing trusts, and HUD compliance.',
+    heroHeading: 'Housing policy and development strategy built to move forward',
     heroDescription:
-      'Affordable housing policy, compliance, and development strategy that expands access and strengthens communities across income levels.',
+      'We write affordable housing policy, support compliance, and build development strategy for communities, nonprofits, and builders across the country.',
     heroImage:
-      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80',
     shortDescription:
-      'Affordable housing policy, development plans, HUD/FHA compliance, and housing market analysis.',
-    tags: ['Affordable Housing', 'HUD/FHA', 'Housing Trust'],
+      'Affordable housing policy, housing plans, and housing trusts, plus market studies and HUD and fair housing compliance guidance.',
+    tags: [
+      'Affordable Housing',
+      'Housing Production',
+      'HUD Compliance',
+      'CDBG / HOME',
+    ],
     overview: {
       badgeLabel: 'Overview',
       heading: 'Expertise Built Inside Housing Authorities',
       paragraphs: [
-        'Housing is one of the most complex intersections of policy, finance, regulation, and human need. Baystate’s founder, Jasifa Chowdhury, brings direct experience from the Cambridge Housing Authority, Vernon Housing Authority, and the City of Cambridge’s Department of Housing & Community Development.',
-        'That insider knowledge means we understand both the regulatory frameworks housing authorities must navigate and the community needs that drive equitable housing policy — allowing us to deliver practical, implementable strategies.',
-        'Whether you’re a municipality developing an affordable housing plan, a nonprofit navigating HUD compliance, or a developer pursuing affordable units, we provide the policy expertise to move your work forward.',
+        'Jasifa Chowdhury has worked inside the system, serving at housing authorities and in city government. She knows how housing authorities operate, how programs are funded, and where applications and projects stall.',
+        'That experience shapes our work in big cities, small towns, and fast-growing suburbs. We create plans that a developer can build and a board can approve, grounded in federal, state, and local housing rules.',
       ],
       image:
-        'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80',
-      imageAlt: 'Affordable housing development',
+        'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
+      imageAlt: 'Residential neighborhood',
+    },
+    process: {
+      sectionLabel: 'Our Approach',
+      heading: 'How We Work',
+      intro:
+        'Every housing plan we write has to be lawful, funded, and fair.',
+      steps: [
+        {
+          stepNum: '01',
+          title: 'Needs Assessment',
+          description:
+            'We analyze housing stock, rents and sale prices, income data, and subsidized housing data to show where need is greatest.',
+        },
+        {
+          stepNum: '02',
+          title: 'Policy and Regulatory Review',
+          description:
+            'We review local zoning, state housing law, HUD program rules, and state housing agency guidelines.',
+        },
+        {
+          stepNum: '03',
+          title: 'Strategy Development',
+          description:
+            'We prepare a plan with specific tools, such as local housing trusts, inclusionary zoning, overlay districts, and local funding sources.',
+        },
+        {
+          stepNum: '04',
+          title: 'Implementation Support',
+          description:
+            'We support board presentations, state agency submissions, and funding applications, helping you move from an adopted plan toward permitted homes.',
+        },
+      ],
     },
     included: {
       sectionLabel: "What's Included",
       heading: 'Housing Services We Provide',
       items: [
         {
-          icon: '🏘️',
-          iconName: 'Home',
+          icon: '📜',
+          iconName: 'FileCheck',
           title: 'Affordable Housing Policy',
           description:
-            'Policy analysis, inclusionary zoning recommendations, and affordable housing strategy development for municipalities and housing agencies.',
+            'We draft and update local affordable housing policy, including inclusionary requirements, local preference rules, and affordability restrictions, with state and federal standards in mind.',
         },
         {
           icon: '📊',
           iconName: 'BarChart2',
           title: 'Housing Market Analysis',
           description:
-            'Data-driven analysis of local housing supply, demand, affordability gaps, and market trends to inform planning and policy decisions.',
+            'We analyze local supply, prices, rents, vacancy, and cost burden using Census, American Community Survey, and state and local housing data.',
         },
         {
-          icon: '📋',
-          iconName: 'FileText',
+          icon: '🏗️',
+          iconName: 'Building',
+          title: 'Housing Production Plans',
+          description:
+            'Our housing production plans give cities, counties, and towns a clear direction to the homes their residents need. We study local demographics, housing supply, and affordability, then identify the sites, zoning changes, and funding tools that make new housing possible. Boards, staff, and residents receive an adoptable housing action plan with next steps they can act on.',
+        },
+        {
+          icon: '🏦',
+          iconName: 'Landmark',
           title: 'Affordable Housing Trust Plans',
           description:
-            'Development and administration support for municipal Affordable Housing Trusts, including funding strategy and allocation frameworks.',
+            'We help communities establish and operate affordable housing trusts. We also prepare trust documents, funding strategies, and annual action plans and track how funds are spent.',
         },
         {
-          icon: '🏛️',
-          iconName: 'Landmark',
-          title: 'HUD / FHA Compliance',
+          icon: '📑',
+          iconName: 'FileText',
+          title: 'HUD Plans and Program Administration',
           description:
-            'Compliance review, fair housing analysis, and regulatory guidance for housing authorities and developers working within federal programs.',
+            'We help cities, counties, and states plan for and manage HUD funding by preparing Consolidated Plans, Annual Action Plans, and performance reports. We also support CDBG and HOME administration, citizen participation, subrecipient oversight, and recordkeeping.',
         },
         {
-          icon: '🏗️',
-          iconName: 'Building',
-          title: 'Development Plans',
+          icon: '⚖️',
+          iconName: 'Scale',
+          title: 'HUD and Fair Housing Compliance',
           description:
-            'Site-level affordable housing development planning, including density analysis, financing strategy, and regulatory pathway mapping.',
+            'Federal programs reward careful practice. We review your operations against fair housing requirements and program rules so developers and housing authorities can work with confidence.',
         },
         {
-          icon: '🤝',
-          iconName: 'Users',
+          icon: '💵',
+          iconName: 'DollarSign',
+          title: 'Community Development Block Grants',
+          description:
+            'We help communities plan, secure, and manage CDBG funding. Larger cities and counties rely on us for planning, project selection, and program administration, and smaller communities for competitive applications to state-run programs, from eligibility review and budgets to reporting and closeout.',
+        },
+        {
+          icon: '🗺️',
+          iconName: 'MapPin',
           title: 'Community Development Strategy',
           description:
-            'Comprehensive community development plans integrating housing, economic opportunity, and social services for underserved neighborhoods.',
+            'We prepare neighborhood strategies that connect housing with jobs, transit, and services, and we write them to support state and federal funding applications.',
         },
-      ],
-    },
-    audiences: {
-      sectionLabel: "Who It's For",
-      heading: 'We Work With',
-      items: [
-        { icon: '🏛️', iconName: 'Landmark', label: 'Housing Authorities' },
-        { icon: '🏙️', iconName: 'Building2', label: 'Municipalities' },
-        { icon: '🤝', iconName: 'Users', label: 'Nonprofits & CDCs' },
         {
-          icon: '🏗️',
-          iconName: 'Building',
-          label: 'Affordable Housing Developers',
-        },
-      ],
-    },
-    process: {
-      sectionLabel: 'Our Approach',
-      heading: 'How We Work',
-      intro:
-        'We bring both policy depth and community perspective to every housing engagement — ensuring solutions are compliant, fundable, and genuinely equitable.',
-      steps: [
-        {
-          stepNum: '01',
-          title: 'Needs Assessment',
+          icon: '🏢',
+          iconName: 'Home',
+          title: 'Housing Authority Services',
           description:
-            'Data analysis of housing stock, affordability, demographics, and policy gaps to identify where intervention is most needed.',
+            'We help housing authorities strengthen operations by preparing agency plans, updating administrative policies, and reviewing procedures against HUD program rules. Having worked inside housing authorities, we shape recommendations around how each agency actually works.',
         },
         {
-          stepNum: '02',
-          title: 'Policy & Regulatory Review',
+          icon: '📐',
+          iconName: 'Compass',
+          title: 'Development Plans',
           description:
-            'Review of existing ordinances, HUD requirements, state housing law, and funding eligibility to map the regulatory landscape.',
-        },
-        {
-          stepNum: '03',
-          title: 'Strategy Development',
-          description:
-            'Co-creation of housing strategies with stakeholders — balanced for feasibility, equity, and political viability.',
-        },
-        {
-          stepNum: '04',
-          title: 'Implementation Support',
-          description:
-            'Ongoing advisory, board presentations, and coordination with state agencies to move plans into action.',
+            'We prepare site and neighborhood development plans that pair affordable homes with zoning, funding, and financing paths, so builders and boards work from one realistic strategy.',
         },
       ],
     },
     cta: {
-      heading: 'Let’s Build More Affordable Housing Together',
+      heading: 'Ready to Address Housing in Your Community?',
       description:
-        'Connect with Baystate to discuss your housing challenge and how we can help.',
-      buttonText: 'Get In Touch',
+        'Let’s create lawful, funded, and fair housing solutions that real people can call home.',
+      buttonText: 'Let’s Talk',
       buttonHref: '/#contact',
     },
   },
   {
     slug: 'zoning-permitting',
-    title: 'Zoning & Permitting',
-    icon: '📐',
+    title: 'Zoning and Permitting',
+    icon: '🧭',
     iconName: 'Compass',
     eyebrow: 'Service',
+    metaDescription:
+      'Baystate Planning guides permits, variances, subdivisions, rezonings, and zoning code updates for communities, builders, and architects nationwide.',
+    heroHeading: 'Zoning and permitting support from start to decision',
     heroDescription:
-      'Expert navigation of permits, variances, rezoning, and development review — from both sides of the planning board table.',
+      'We prepare applications and support reviews, rezonings, and hearings for projects across the country. Our team knows how public agencies review development proposals.',
     heroImage:
       'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80',
     shortDescription:
-      'Special permits, variances, subdivisions, zoning/rezoning plans, and development review assistance that move projects forward.',
-    tags: ['Special Permits', 'Variances', 'Rezoning', 'Dev Review'],
+      'Permits, variances, subdivisions, and rezonings, plus site plan and design review.',
+    tags: [
+      'Special Permits',
+      'Variances',
+      'Subdivisions',
+      'Zoning Code Updates',
+    ],
     overview: {
       badgeLabel: 'Overview',
       heading: 'We Know How Approvals Actually Work',
       paragraphs: [
-        'Zoning and permitting is where projects either move forward or stall indefinitely. The difference is usually preparation — knowing what the board wants to see, how to frame a variance request, and what documentation makes an application airtight.',
-        'Baystate’s team has worked inside planning departments and zoning boards, which means we understand the approval process from the inside. We prepare applications that anticipate objections, satisfy regulatory requirements, and minimize costly back-and-forth.',
-        'Whether you’re a developer seeking a special permit, an architect navigating a rezoning for a client, or a municipality updating its zoning bylaws, we provide the planning expertise to get it done right.',
+        'Most development projects need approval from a planning commission, a zoning board, or both. Many delays trace back to avoidable gaps in the application.',
+        'The Baystate team has worked inside public agencies. We know what reviewers look for under state law and local codes, and we build applications that answer those points before the hearing.',
+        'You may be a builder seeking a conditional use permit in a growing suburb. You may be an architect managing a rezoning for a client, or a rural county rewriting its zoning code. We handle the analysis, application, and hearing preparation.',
       ],
       image:
-        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
-      imageAlt: 'Zoning review meeting',
+        'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+      imageAlt: 'Zoning and architectural review',
+    },
+    process: {
+      sectionLabel: 'Our Approach',
+      heading: 'How We Work',
+      intro:
+        'We do the detailed work early so your application is complete and ready for review.',
+      steps: [
+        {
+          stepNum: '01',
+          title: 'Regulatory Review',
+          description:
+            'We review the zoning code, overlay districts, dimensional requirements, and the property’s permit history. We identify which approvals apply and what other local review the project may need.',
+        },
+        {
+          stepNum: '02',
+          title: 'Application Preparation',
+          description:
+            'We prepare the application narrative, required findings, and supporting exhibits in the format your local board requires. We coordinate plan sets with your engineer, surveyor, or architect.',
+        },
+        {
+          stepNum: '03',
+          title: 'Board Hearing Support',
+          description:
+            'We attend hearings with you, present the planning case, and help respond to board and neighbor questions. We also help you prepare for required notices and public hearing steps.',
+        },
+        {
+          stepNum: '04',
+          title: 'Approval and Conditions',
+          description:
+            'We review the written decision and its conditions with you. We also help you track appeal deadlines and any recording or follow-up requirements.',
+        },
+      ],
     },
     included: {
       sectionLabel: "What's Included",
       heading: 'Zoning Services We Provide',
       items: [
         {
-          icon: '📝',
-          iconName: 'FileEdit',
-          title: 'Special Permit Applications',
+          icon: '✅',
+          iconName: 'CheckSquare',
+          title: 'Special and Conditional Use Permits',
           description:
-            'End-to-end preparation of special permit applications including site analysis, findings, narrative, and supporting documentation.',
+            'We prepare applications that include site analysis, findings that track the code’s criteria, and the documents the board requires.',
         },
         {
-          icon: '⚖️',
-          iconName: 'Scale',
-          title: 'Variance Filings',
+          icon: '📐',
+          iconName: 'Sliders',
+          title: 'Variances',
           description:
-            'Dimensional and use variance requests with legal findings analysis, hardship documentation, and board presentation support.',
+            'We document the site conditions and hardship your state and local rules require, and we prepare you to present them.',
         },
         {
           icon: '🗺️',
           iconName: 'Map',
-          title: 'Subdivision Plans',
+          title: 'Subdivisions and Plats',
           description:
-            'Preliminary and definitive subdivision plan review and preparation, coordinating with engineers, surveyors, and planning boards.',
+            'We review and support lot splits, preliminary plans, and final plats, coordinating with your engineer, surveyor, and planning commission.',
         },
         {
           icon: '🔄',
           iconName: 'RefreshCw',
-          title: 'Zoning & Rezoning',
+          title: 'Zoning and Rezoning',
           description:
-            'Rezoning petitions, zoning bylaw amendments, overlay district creation, and map amendment support for municipalities and landowners.',
+            'We help local governments and landowners with rezoning requests, code amendments, new overlay districts, and map updates. A single line on a map can change a neighborhood, and we treat it with that weight.',
         },
         {
-          icon: '🔍',
-          iconName: 'Search',
+          icon: '📋',
+          iconName: 'FileSearch',
           title: 'Development Review Assistance',
           description:
-            'Site plan review, design review board preparation, and regulatory compliance analysis for commercial and residential projects.',
+            'We support site plan review, design review, and public hearings, from first submission to final decision.',
         },
         {
-          icon: '📖',
+          icon: '📚',
           iconName: 'BookOpen',
-          title: 'Zoning Bylaw Updates',
+          title: 'Zoning Code Updates',
           description:
-            'Comprehensive zoning code audits, bylaw modernization, and drafting of new zoning provisions for municipalities.',
-        },
-      ],
-    },
-    audiences: {
-      sectionLabel: "Who It's For",
-      heading: 'We Work With',
-      items: [
-        {
-          icon: '🏗️',
-          iconName: 'DraftingCompass',
-          label: 'Architects & Designers',
-        },
-        {
-          icon: '🏢',
-          iconName: 'Building2',
-          label: 'Real Estate Developers',
-        },
-        { icon: '🏛️', iconName: 'Landmark', label: 'Municipalities' },
-        { icon: '🏠', iconName: 'Home', label: 'Landowners & Builders' },
-      ],
-    },
-    process: {
-      sectionLabel: 'Our Approach',
-      heading: 'How We Work',
-      intro:
-        'We front-load the work that matters — so your application is complete, compliant, and compelling before it ever reaches the board.',
-      steps: [
-        {
-          stepNum: '01',
-          title: 'Regulatory Review',
-          description:
-            'We analyze the applicable zoning bylaw, overlay districts, and regulatory history for your parcel to identify the right approval path.',
-        },
-        {
-          stepNum: '02',
-          title: 'Application Preparation',
-          description:
-            'We draft the full application package — narrative, findings, plans, and supporting materials — tailored to your board’s standards.',
-        },
-        {
-          stepNum: '03',
-          title: 'Board Hearing Support',
-          description:
-            'We attend hearings, respond to board questions, and work with abutters to minimize opposition and build support.',
-        },
-        {
-          stepNum: '04',
-          title: 'Approval & Conditions',
-          description:
-            'We review conditions of approval, advise on compliance requirements, and ensure your approval is properly recorded.',
+            'We audit existing zoning codes, flag outdated or conflicting provisions, and draft new sections for communities that need rules to match growth. Your attorney reviews the final language before adoption.',
         },
       ],
     },
     cta: {
-      heading: 'Ready to Move Your Project Through Permitting?',
+      heading: 'Need Zoning or Permitting Guidance?',
       description:
-        'Let’s talk about your project and the fastest path to approval.',
-      buttonText: 'Get In Touch',
+        'Avoid costly delays and build applications that boards can approve with confidence.',
+      buttonText: 'Let’s Talk',
       buttonHref: '/#contact',
     },
   },
   {
-    slug: 'grant-writing',
-    title: 'Grant Writing',
-    icon: '📝',
-    iconName: 'FileText',
+    slug: 'grants-funding',
+    title: 'Grants and Funding',
+    icon: '💰',
+    iconName: 'DollarSign',
     eyebrow: 'Service',
+    metaDescription:
+      'Baystate Planning helps local governments, housing authorities, and nonprofits find funding, write grant applications, and stay compliant after an award.',
+    heroHeading: 'Turning community priorities into funded projects',
     heroDescription:
-      'Strategic grant development and full application management for federal, state, municipal, and nonprofit funding programs.',
+      'Baystate Planning & Consulting Group helps local governments, housing authorities, and nonprofits across the country pursue funding for their projects. We identify the right federal, state, and local programs, prepare competitive applications, and support clients through reporting and compliance. Every strategy is built around your goals, timeline, and community needs.',
     heroImage:
-      'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80',
     shortDescription:
-      'Strategic grant development for federal, state, municipal, and nonprofit programs — including full application management and compliance documentation.',
-    tags: ['Federal Grants', 'State Funding', 'Compliance'],
+      'Applications and compliance support for federal, state, and local programs.',
+    tags: [
+      'Grant Writing',
+      'Federal Grants',
+      'State & Local Funds',
+      'Grant Compliance',
+    ],
     overview: {
-      badgeLabel: 'Overview',
-      heading: 'Funding Strategy That Actually Wins',
+      badgeLabel: 'Funding Strategy',
+      heading: 'Funding That Moves Projects Forward',
       paragraphs: [
-        'Grant writing is a specialized skill that combines policy knowledge, storytelling, budget discipline, and regulatory expertise. Baystate has direct experience writing and managing grants at the municipal, state, and federal level — including HUD programs, state housing funds, climate grants, and economic development funding.',
-        'We don’t just write — we help you identify the right funding opportunities, build a compelling narrative aligned with funder priorities, and manage the full application process from needs assessment to submission.',
-        'Our approach is strategic: we focus on grants your organization can realistically win and can implement successfully — maximizing your return on the application investment.',
+        'Many communities have strong projects but limited staff time to pursue funding. Our team handles the research, writing, and coordination so local staff can stay focused on daily operations.',
+        'With experience across housing policy, community development, and regional planning, we help clients present their needs clearly and compete for the resources that build stronger communities.',
       ],
       image:
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
-      imageAlt: 'Grant writing and strategy',
+        'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80',
+      imageAlt: 'Funding analysis and grant review',
     },
     included: {
-      sectionLabel: "What's Included",
-      heading: 'Grant Services We Provide',
+      sectionLabel: 'Our Specialization',
+      heading: 'Our Experts Specialize In',
       items: [
         {
           icon: '🔍',
           iconName: 'Search',
-          title: 'Funding Opportunity Research',
+          title: 'Grant Opportunity Assessment',
           description:
-            'Identification of federal, state, and private funding opportunities aligned with your project goals, timeline, and organizational capacity.',
+            'We review available programs and match each project with the funding sources that fit it best.',
         },
         {
-          icon: '📋',
-          iconName: 'ClipboardCheck',
-          title: 'Needs Assessment',
+          icon: '✍️',
+          iconName: 'FileText',
+          title: 'Grant Writing and Application Support',
           description:
-            'Data-driven documentation of community need — the foundation of any competitive grant application.',
+            'We prepare complete applications with strong narratives, sound budgets, and alignment to scoring criteria.',
+        },
+        {
+          icon: '🏛️',
+          iconName: 'Landmark',
+          title: 'Federal Grant Support',
+          description:
+            'We guide HUD and other federal applications through registration, program requirements, and submission deadlines.',
+        },
+        {
+          icon: '🗺️',
+          iconName: 'MapPin',
+          title: 'State and Local Funding',
+          description:
+            'We pursue state housing and community development programs, local trust funds, and regional funding sources.',
+        },
+        {
+          icon: '📊',
+          iconName: 'BarChart2',
+          title: 'Needs Statements and Data Analysis',
+          description:
+            'We gather housing, demographic, and economic data to build an evidence-based case for funding.',
+        },
+        {
+          icon: '🛡️',
+          iconName: 'CheckCircle',
+          title: 'Compliance and Reporting',
+          description:
+            'We set up tracking and reporting systems that help keep awards in good standing from start to closeout.',
+        },
+      ],
+    },
+    cta: {
+      heading: 'Ready to Pursue Funding for Your Project?',
+      description:
+        'Let’s identify the right programs and build competitive applications that win support.',
+      buttonText: 'Contact Us',
+      buttonHref: '/#contact',
+    },
+  },
+  {
+    slug: 'rfp-procurement',
+    title: 'RFP and Procurement',
+    icon: '📑',
+    iconName: 'ClipboardCheck',
+    eyebrow: 'Service',
+    metaDescription:
+      'Baystate Planning helps public agencies write RFPs and evaluate submissions, and helps firms prepare strong proposals for public contracts.',
+    heroHeading: 'Stronger solicitations, more competitive proposals',
+    heroDescription:
+      'Baystate Planning & Consulting Group supports both sides of public procurement. We help cities, counties, towns, and housing authorities across the country issue clear, compliant solicitations that attract qualified bidders. We also help planning, architecture, and technology firms prepare proposals that stand out to selection committees. Our experience in housing authorities, local government, and regional planning gives clients an evaluator’s view of what makes a submission succeed.',
+    heroImage:
+      'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1600&q=80',
+    shortDescription:
+      'Solicitations, vendor evaluation, proposals, and qualification packages.',
+    tags: [
+      'RFP Development',
+      'Vendor Evaluation',
+      'RFQ / RFEI',
+      'Procurement Compliance',
+    ],
+    overview: {
+      badgeLabel: 'Procurement Services',
+      heading: 'Clear Procurement from Start to Finish',
+      paragraphs: [
+        'A well-written solicitation saves time for everyone involved. When scopes and criteria are clear, public agencies receive comparable bids, committees can decide faster, and projects start on stronger footing.',
+        'Our team brings hands-on experience from housing authorities, city government, and regional planning commissions. We understand how public agencies buy, and we help clients approach every procurement with confidence.',
+      ],
+      image:
+        'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+      imageAlt: 'Procurement and RFP meeting',
+    },
+    conflictCommitment: {
+      heading: 'Our Conflict-of-Interest Commitment',
+      description:
+        'We never represent both sides of the same procurement. If we help an agency prepare a solicitation or evaluate submissions, we will not bid on that opportunity or help anyone respond to it.',
+    },
+    included: {
+      sectionLabel: 'Our Specialization',
+      heading: 'Our Experts Specialize In',
+      items: [
+        {
+          icon: '📝',
+          iconName: 'FileEdit',
+          title: 'RFP Development',
+          description:
+            'We write requests for proposals with clear scopes and fair evaluation criteria, aligned with applicable procurement laws.',
+        },
+        {
+          icon: '⚖️',
+          iconName: 'Scale',
+          title: 'Vendor Evaluation and Scoring',
+          description:
+            'We build scoring frameworks and review submissions to help selection committees make well-documented decisions.',
+        },
+        {
+          icon: '📑',
+          iconName: 'FileText',
+          title: 'RFQ and RFEI Support',
+          description:
+            'We prepare complete, well-organized qualification submissions on tight deadlines.',
         },
         {
           icon: '✍️',
           iconName: 'PenTool',
-          title: 'Narrative Writing',
+          title: 'Proposal Writing',
           description:
-            'Compelling project narratives that speak the funder’s language, hit all scoring criteria, and tell a clear, persuasive story.',
+            'We write responses for planning, architecture, and consulting firms that clearly present project understanding, approach, and team strengths.',
         },
         {
-          icon: '💰',
-          iconName: 'DollarSign',
-          title: 'Budget Development',
-          description:
-            'Detailed, compliant project budgets with matching fund documentation and cost-benefit framing.',
-        },
-        {
-          icon: '📂',
+          icon: '📁',
           iconName: 'FolderCheck',
-          title: 'Compliance Documentation',
+          title: 'Qualification Packages',
           description:
-            'Collection and preparation of all required compliance materials — environmental reviews, certifications, organizational docs.',
+            'We organize resumes, project histories, and credentials into polished packages ready for any solicitation.',
         },
         {
-          icon: '📬',
-          iconName: 'Send',
-          title: 'Full Application Management',
+          icon: '🛡️',
+          iconName: 'ShieldCheck',
+          title: 'Procurement Compliance Review',
           description:
-            'End-to-end management of the submission process including portal navigation, deadline tracking, and post-award reporting.',
+            'We review solicitations and submissions against federal, state, and local requirements, including e-procurement portal rules, before they are released or submitted.',
         },
-      ],
-    },
-    fundingSources: {
-      sectionLabel: 'Funding Sources',
-      heading: 'Programs We Write For',
-      cards: [
-        {
-          title: '🏛️ Federal Programs',
-          examples:
-            'HUD CDBG, HOME, NHTF · EPA Environmental Justice · FHWA Transportation · EDA Economic Development · USDA Rural Development',
-        },
-        {
-          title: '🏠 State Housing Funds',
-          examples:
-            'MassHousing · DHCD Community Development · Housing Choice · Commonwealth Builder · Affordable Housing Trust Fund',
-        },
-        {
-          title: '🌱 Climate & Resilience',
-          examples:
-            'BRIC · HMGP · EPA Climate Pollution Reduction · State climate resilience programs · Green infrastructure grants',
-        },
-      ],
-    },
-    audiences: {
-      sectionLabel: "Who It's For",
-      heading: 'We Work With',
-      items: [
-        { icon: '🏛️', iconName: 'Landmark', label: 'Municipalities & Towns' },
-        { icon: '🤝', iconName: 'Users', label: 'Nonprofits & CDCs' },
-        { icon: '🏘️', iconName: 'Home', label: 'Housing Authorities' },
-        { icon: '🏗️', iconName: 'Building', label: 'Developers' },
       ],
     },
     cta: {
-      heading: 'Ready to Secure Your Next Grant?',
+      heading: 'Need Procurement or Proposal Support?',
       description:
-        'Tell us about your project and the funding you’re pursuing — we’ll tell you if we can help you win it.',
-      buttonText: 'Get In Touch',
+        'Whether you’re issuing a solicitation or responding to one, let’s make your next procurement smooth and successful.',
+      buttonText: 'Contact Us',
       buttonHref: '/#contact',
     },
   },
@@ -505,24 +592,32 @@ export const servicesData: ServiceItem[] = [
     icon: '🗺️',
     iconName: 'Map',
     eyebrow: 'Service',
+    metaDescription:
+      'Baystate Planning offers communities, nonprofits, and builders nationwide GIS mapping, data analysis, policy review, and grant technical support.',
+    heroHeading: 'The maps, data, and policy review behind sound decisions',
     heroDescription:
-      'GIS mapping, data analysis, dashboards, and policy support — targeted analytical tools to help communities and organizations make smarter decisions.',
+      'We give communities and organizations the information they need to make strong planning decisions.',
     heroImage:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1524813686514-a57563d77d66?auto=format&fit=crop&w=1600&q=80',
     shortDescription:
-      'GIS mapping, spatial analysis, data forecasting, dashboards, policy review, and community engagement support for informed decisions.',
-    tags: ['GIS & Mapping', 'Data Analysis', 'Dashboards'],
+      'GIS mapping, housing and demographic analysis, dashboards, and policy review.',
+    tags: [
+      'GIS Mapping',
+      'Data Analysis',
+      'Policy Review',
+      'On-Call Support',
+    ],
     overview: {
-      badgeLabel: 'Overview',
-      heading: 'Data & Analysis That Drives Real Decisions',
+      badgeLabel: 'Technical Support',
+      heading: 'Data and Analysis That Drive Sound Decisions',
       paragraphs: [
-        'Planning decisions need to be grounded in evidence. Our technical assistance services give municipalities, nonprofits, and developers access to the analytical tools and expertise that typically only large agencies can afford in-house.',
-        'From GIS mapping and spatial analysis to regulatory policy review and community engagement support, we provide targeted, right-sized technical support that helps organizations move from questions to confident decisions.',
-        'We’re also uniquely positioned to bridge the gap between planning data and software systems — helping GovTech clients understand the data standards and structures that government users need.',
+        'Every community faces critical choices about how to spend money on roads, water, and essential infrastructure. Smart decisions require reliable data, yet many local governments and organizations have limited capacity to do the heavy lifting.',
+        'Baystate Planning & Consulting Group closes that gap. We provide GIS mapping, housing and demographic analysis, policy review, and community engagement support to planning commissions, elected officials, housing authorities, and nonprofits.',
+        'We also connect planning data to the software that uses it. We help technology companies learn the data standards public offices rely on every day.',
       ],
       image:
-        'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80',
-      imageAlt: 'Data analysis and GIS mapping',
+        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+      imageAlt: 'GIS and spatial data analytics',
     },
     included: {
       sectionLabel: "What's Included",
@@ -530,307 +625,325 @@ export const servicesData: ServiceItem[] = [
       items: [
         {
           icon: '🗺️',
-          iconName: 'Map',
-          title: 'GIS Mapping & Spatial Analysis',
+          iconName: 'MapPin',
+          title: 'GIS Mapping and Spatial Analysis',
           description:
-            'Custom mapping, parcel analysis, zoning overlays, and spatial data visualization for planning and development decisions.',
+            'We build custom maps and parcel-level analysis from state, county, and local data. Typical products include zoning and overlay maps, buildable land analysis, and site maps for housing and transit-oriented districts.',
         },
         {
-          icon: '📊',
+          icon: '📈',
           iconName: 'TrendingUp',
-          title: 'Data Analysis & Forecasting',
+          title: 'Data Analysis and Forecasting',
           description:
-            'Demographic projections, housing needs forecasting, economic analysis, and trend modeling to inform long-range planning.',
+            'We analyze U.S. Census and American Community Survey data, housing costs, and subsidized housing data to document local needs. We project population and household change so boards can plan with numbers.',
         },
         {
           icon: '📜',
-          iconName: 'Scroll',
-          title: 'Regulatory & Policy Review',
+          iconName: 'FileCheck2',
+          title: 'Regulatory and Policy Review',
           description:
-            'Analysis of zoning bylaws, state regulations, federal requirements, and local ordinances for compliance and opportunity gaps.',
+            'We review local codes, state laws, and federal requirements for your project. We flag conflicts and compliance gaps before an application is filed or a code change goes to a vote.',
         },
         {
-          icon: '🤝',
+          icon: '👥',
           iconName: 'Users',
           title: 'Community Engagement Support',
           description:
-            'Survey design, public meeting facilitation, multilingual outreach materials, and engagement data synthesis.',
+            'We design surveys and guide public meetings where real voices are heard. Through multilingual outreach and careful listening, we bring more residents into the process.',
         },
         {
-          icon: '📝',
+          icon: '📑',
           iconName: 'FileText',
           title: 'Grant Technical Support',
           description:
-            'Data gathering, needs documentation, and technical exhibits to strengthen grant applications.',
+            'We gather data, document local needs, and prepare the technical sections of state and federal funding applications.',
         },
         {
           icon: '📁',
-          iconName: 'Folder',
-          title: 'RFE / RFQ / RFP Assistance',
+          iconName: 'Briefcase',
+          title: 'RFE, RFQ, and RFP Assistance',
           description:
-            'Technical writing, qualifications packages, and proposal development for government and nonprofit procurement processes.',
+            'We prepare technical responses and qualification packages for government and nonprofit solicitations.',
         },
         {
-          icon: '📅',
-          iconName: 'Calendar',
+          icon: '⏱️',
+          iconName: 'Clock',
           title: 'Project Management Support',
           description:
-            'Coordination support for multi-stakeholder planning projects — timelines, deliverable tracking, and meeting management.',
+            'We manage schedules, consultant teams, meeting calendars, and deliverables for multi-party planning projects, with regular status reports to your staff.',
         },
         {
-          icon: '📈',
-          iconName: 'LineChart',
-          title: 'Dashboards & Visualizations',
+          icon: '📊',
+          iconName: 'LayoutDashboard',
+          title: 'Dashboards and Visualizations',
           description:
-            'Interactive dashboards, infographics, and data visualizations that make planning data accessible to decision-makers and the public.',
-        },
-      ],
-    },
-    audiences: {
-      sectionLabel: "Who It's For",
-      heading: 'We Work With',
-      items: [
-        { icon: '🏛️', iconName: 'Landmark', label: 'Municipalities' },
-        { icon: '🤝', iconName: 'Users', label: 'Nonprofits & CDCs' },
-        { icon: '💻', iconName: 'Laptop', label: 'GovTech Companies' },
-        {
-          icon: '🏗️',
-          iconName: 'Building',
-          label: 'Developers & Architects',
-        },
-      ],
-    },
-    cta: {
-      heading: 'Need Data-Driven Planning Support?',
-      description:
-        'Tell us what you’re trying to analyze or understand — we’ll find the right technical approach.',
-      buttonText: 'Get In Touch',
-      buttonHref: '/#contact',
-    },
-  },
-  {
-    slug: 'international-planning',
-    title: 'International Planning',
-    icon: '🌍',
-    iconName: 'Globe2',
-    eyebrow: 'Service',
-    heroDescription:
-      'Global sustainable development, climate adaptation, and community resilience — supporting governments and NGOs in addressing complex urban challenges worldwide.',
-    heroImage:
-      'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80',
-    shortDescription:
-      'Global sustainable development, climate adaptation, informal settlement upgrading, and SDG-aligned urban strategies supporting governments and NGOs.',
-    tags: ['Climate Adaptation', 'SDG Alignment', 'NGO Support'],
-    overview: {
-      badgeLabel: 'Overview',
-      heading: 'Global Experience, Community-Centered Practice',
-      paragraphs: [
-        'Urbanization, climate change, and housing informality are global challenges that require planners who can operate across cultural, regulatory, and institutional contexts. Baystate brings international planning experience combined with deep community engagement practice.',
-        'We support governments, international development organizations, and NGOs working on sustainable urban development, climate resilience, and housing equity in cities around the world.',
-        'Our approach is grounded in the belief that effective international planning must be culturally responsive, locally led, and aligned with both global frameworks like the SDGs and the realities on the ground.',
-      ],
-      image:
-        'https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=800&q=80',
-      imageAlt: 'International urban planning',
-    },
-    included: {
-      sectionLabel: "What's Included",
-      heading: 'International Services We Provide',
-      items: [
-        {
-          icon: '🌱',
-          iconName: 'Sprout',
-          title: 'Climate Resilience & Adaptation',
-          description:
-            'Climate vulnerability assessments, adaptation strategies, and resilience planning for cities and communities facing climate risk.',
-        },
-        {
-          icon: '🏘️',
-          iconName: 'Home',
-          title: 'Informal Settlement Upgrading',
-          description:
-            'In-situ upgrading strategies, land tenure support, infrastructure planning, and community-led development for informal settlements.',
-        },
-        {
-          icon: '🌍',
-          iconName: 'Globe',
-          title: 'Global Housing Strategies',
-          description:
-            'National and city-level housing strategies addressing affordability, supply, finance access, and land use for diverse global contexts.',
-        },
-        {
-          icon: '📈',
-          iconName: 'TrendingUp',
-          title: 'Urbanization & Growth Management',
-          description:
-            'Strategic plans for rapidly urbanizing cities managing population growth, infrastructure demand, and land use pressures.',
+            'We build interactive dashboards and charts that show housing production, permit activity, grant progress, and other local indicators.',
         },
         {
           icon: '🤝',
-          iconName: 'HeartHandshake',
-          title: 'Culturally Responsive Engagement',
+          iconName: 'Handshake',
+          title: 'On-Call Planning Support',
           description:
-            'Community engagement designed for diverse cultural contexts — multilingual, participatory, and adapted to local decision-making norms.',
-        },
-        {
-          icon: '🎯',
-          iconName: 'Target',
-          title: 'SDG Alignment & Reporting',
-          description:
-            'Alignment of urban development programs with the UN Sustainable Development Goals, particularly SDG 11 (Sustainable Cities).',
-        },
-      ],
-    },
-    audiences: {
-      sectionLabel: "Who It's For",
-      heading: 'We Work With',
-      items: [
-        {
-          icon: '🏛️',
-          iconName: 'Landmark',
-          label: 'National & Local Governments',
-        },
-        { icon: '🌐', iconName: 'Globe', label: 'International NGOs' },
-        {
-          icon: '🏦',
-          iconName: 'Building',
-          label: 'Development Finance Institutions',
-        },
-        {
-          icon: '🎓',
-          iconName: 'GraduationCap',
-          label: 'Research & Academic Partners',
+            'We give local governments experienced planning support without a full-time hire, on an hourly, part-time, or interim basis. We review applications, prepare staff reports, attend board meetings, answer zoning questions, and keep long-range projects moving, with support that grows or shrinks with your workload.',
         },
       ],
     },
     cta: {
-      heading: 'Working on a Global Urban Challenge?',
+      heading: 'Need Data, Mapping, or On-Call Planning?',
       description:
-        'Tell us about your project and the communities you’re working with — we’d love to explore a collaboration.',
-      buttonText: 'Get In Touch',
+        'Bring senior planning capacity to your team without the full-time overhead.',
+      buttonText: 'Let’s Talk',
       buttonHref: '/#contact',
     },
   },
   {
-    slug: 'govtech-software',
-    title: 'GovTech & Housing Software Consulting',
-    shortTitle: 'GovTech & Software',
+    slug: 'government-technology',
+    title: 'Government Technology',
     icon: '💻',
     iconName: 'Laptop',
     eyebrow: 'Service',
+    metaDescription:
+      'Baystate Planning helps software companies and public agencies build, buy, and launch housing and permitting software that fits public workflows.',
+    heroHeading: 'Technology built for the way government works',
     heroDescription:
-      'The planning expertise software developers and municipalities need to build products that work in the real world of government workflows and housing policy.',
+      'Baystate Planning & Consulting Group connects public-sector experience with software development. We help technology companies understand the regulations and daily workflows behind housing, permitting, and planning. We also help local governments and housing authorities select and implement systems that fit their needs.',
     heroImage:
-      'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1600&q=80',
     shortDescription:
-      'We bridge the gap between planning policy and technology. Whether you’re a software company building for municipalities or a town procuring a housing platform, we provide the planning expertise to make your product work in the real world.',
+      'Requirements, data standards, compliance review, and procurement support for housing portals, waitlist systems, and permitting software.',
     tags: [
-      'Housing Portals',
-      'Waitlist Systems',
-      'GIS Integration',
-      'Gov Data Dashboards',
-      'Software RFP/RFQ',
-      'Policy Compliance',
+      'GovTech',
+      'Civic Software',
+      'Procurement',
+      'Policy-to-Product',
     ],
     overview: {
-      badgeLabel: 'Overview',
+      badgeLabel: 'The Bridge',
       heading: 'The Bridge Between Policy and Technology',
       paragraphs: [
-        'Government technology fails when it’s built without understanding how planning and housing agencies actually operate. Baystate fills that gap — providing the planning domain expertise that helps software companies build products that fit real workflows, and helping municipalities find and procure the right tools.',
-        'We’ve worked inside planning departments, housing authorities, and regional planning commissions. We know the data they use, the processes they follow, the regulations they’re bound by, and the procurement processes they must navigate.',
-        'Whether you’re a developer building a housing waitlist platform or a town seeking to modernize your permitting system, we speak both languages — planning policy and software development.',
+        'Our team has worked in planning departments, housing authorities, and regional planning commissions. We know the data these offices rely on, the regulations they follow, and what it takes to get something purchased and approved.',
+        'You may be building a waitlist platform for a housing authority. You may run a small town that needs to replace an aging permitting system. Either way, we speak the language of public policy and the language of software, and we translate between them so the work gets done.',
       ],
       image:
-        'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80',
-      imageAlt: 'GovTech and software development',
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+      imageAlt: 'Civic technology dashboard and workflow design',
     },
     audienceCards: {
-      sectionLabel: 'Two Audiences, One Expertise',
-      heading: 'Who We Help',
+      sectionLabel: 'Who We Help',
+      heading: 'Software Companies & Public Agencies',
       cards: [
         {
           isDark: true,
-          label: 'For Software Developers',
+          label: 'For Software Companies',
           title: 'Build Products That Work for Government',
           points: [
-            'Translate HUD rules, zoning codes, and housing regulations into product requirements',
-            'Map government workflows your software needs to fit into',
-            'Define GIS data standards and housing data structures',
-            'Review products for HUD/FHA and fair housing compliance before launch',
-            'Connect your company with municipal and housing authority pilot partners',
-            'Support RFP/RFQ responses to land public contracts',
+            'Turn complex zoning and housing rules into product requirements.',
+            'Confirm your software fits the processes public offices already use.',
+            'Define GIS standards and housing data structures.',
+            'Check fair housing and compliance requirements well before launch.',
+            'Connect with public-sector partners who can give honest feedback.',
+            'Prepare strong qualification packages for public contracts.',
           ],
         },
         {
           isDark: false,
-          label: 'For Municipalities & Housing Authorities',
-          title: 'Find & Deploy the Right Technology',
+          label: 'For Local Governments & Housing Authorities',
+          title: 'Find and Deploy the Right Technology',
           points: [
-            'Write technology RFPs that attract qualified vendors',
-            'Evaluate vendor proposals against your planning and compliance needs',
-            'Assess whether a platform fits your workflow before you sign',
-            'Define data requirements and integration standards',
-            'Manage implementation and staff transition planning',
-            'Audit existing systems for regulatory gaps',
+            'Write solicitations that attract qualified, reliable vendors.',
+            'Compare vendor offerings against your real planning and compliance needs.',
+            'Pilot new platforms to confirm they work in your office.',
+            'Set data and integration guidelines.',
+            'Onboard staff so the new software gets used.',
+            'Audit current systems and find gaps in your guidelines and regulations.',
           ],
         },
       ],
     },
     included: {
-      sectionLabel: "What's Included",
-      heading: 'Services We Provide',
+      sectionLabel: 'Services We Provide',
+      heading: 'Civic Tech & GovTech Advisory',
       items: [
         {
           icon: '🏛️',
           iconName: 'Landmark',
           title: 'Municipal Software Procurement',
           description:
-            'RFP writing, vendor evaluation, and selection support for housing portals, permitting systems, and planning platforms.',
+            'We help public agencies write software RFPs, compare vendors, and select platforms for housing, permitting, and planning.',
         },
         {
-          icon: '📋',
-          iconName: 'FileCheck',
-          title: 'Policy-to-Product Translation',
+          icon: '🔄',
+          iconName: 'Code2',
+          title: 'Policy to Product Translation',
           description:
-            'Converting HUD rules, zoning bylaws, and housing regulations into clear, buildable software requirements.',
+            'We turn HUD regulations, zoning codes, and housing program rules into detailed requirements and user stories a development team can build from.',
         },
         {
           icon: '🗄️',
           iconName: 'Database',
           title: 'Data Architecture Advisory',
           description:
-            'GIS data standards, housing waitlist data structures, and reporting frameworks aligned with federal and state requirements.',
+            'We help design GIS standards, waitlist data structures, and reporting tools that support state and federal requirements and still make sense to the people who use them.',
         },
         {
-          icon: '✅',
-          iconName: 'CheckSquare',
+          icon: '⚖️',
+          iconName: 'ShieldCheck',
           title: 'Compliance Review',
           description:
-            'Pre-launch and ongoing review of housing software for HUD/FHA compliance, fair housing requirements, and local regulations.',
+            'We review housing software against HUD rules, fair housing requirements, and local regulations before and after launch. Rules change, so we can review again when they do.',
         },
         {
           icon: '🤝',
           iconName: 'Handshake',
-          title: 'Developer–Municipality Matchmaking',
+          title: 'Vendor and Community Matchmaking',
           description:
-            'Connecting GovTech companies with the right municipal and housing authority partners for pilots and contracts.',
+            'We connect technology companies with local governments and housing authorities looking for new solutions, and we help structure pilots with clear success measures. We disclose any relationship with a vendor before making an introduction.',
         },
         {
-          icon: '📝',
-          iconName: 'FileText',
-          title: 'RFE / RFQ Proposal Support',
+          icon: '🚀',
+          iconName: 'Rocket',
+          title: 'Implementation and Onboarding Support',
           description:
-            'Helping software companies respond to government solicitations with competitive, compliant qualifications packages.',
+            'We support pilots, staff training, and data setup so new systems are fully adopted.',
+        },
+        {
+          icon: '📑',
+          iconName: 'FileText',
+          title: 'Proposal Support',
+          description:
+            'We prepare qualification packages and proposal responses for public agency and housing authority solicitations.',
+        },
+      ],
+    },
+    narrativeBlock: {
+      heading: 'Bridging Policy and Technology',
+      paragraphs: [
+        'Government software works best when it reflects how public employees actually do their jobs. Our background in planning departments, housing authorities, and regional commissions gives development teams practical insight that rarely appears in a requirements document.',
+        'We help software companies and public agencies build and adopt tools that improve service delivery, reduce compliance risk, and serve communities well.',
+      ],
+    },
+    cta: {
+      heading: 'Building or Buying Government Software?',
+      description:
+        'Let’s bridge the gap between policy rules and workable software.',
+      buttonText: 'Contact Us',
+      buttonHref: '/#contact',
+    },
+  },
+  {
+    slug: 'international-planning',
+    title: 'International Planning',
+    icon: '🌐',
+    iconName: 'Globe2',
+    eyebrow: 'Service',
+    metaDescription:
+      'Baystate Planning, a US-based firm, supports governments worldwide with climate resilience, housing strategy, and urban growth planning.',
+    heroHeading: 'Lasting plans for urgent urban pressures',
+    heroDescription:
+      'We support governments and organizations facing rapid change and help them build plans that last.',
+    heroImage:
+      'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1600&q=80',
+    shortDescription:
+      'Climate adaptation, housing strategy, and informal settlement upgrading for governments, NGOs, and development finance institutions.',
+    tags: [
+      'Climate Resilience',
+      'Settlement Upgrading',
+      'Housing Strategy',
+      'SDG Alignment',
+    ],
+    overview: {
+      badgeLabel: 'Global Reach',
+      heading: 'Global Experience Rooted in Local Communities',
+      paragraphs: [
+        'Baystate Planning & Consulting Group is a US-based firm with planning experience on three continents. Our team has worked in Southeast Asia and Sub-Saharan Africa, and we bring the same methods we use in American communities to cities abroad, including climate vulnerability assessment, housing needs analysis, and GIS mapping.',
+        'We assist governments and international organizations on climate resilience, housing strategy, and urban growth. Each project is built with local staff and residents, so the plan fits local law, local culture, and local capacity.',
+      ],
+      image:
+        'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80',
+      imageAlt: 'Global planning and urbanization meeting',
+    },
+    included: {
+      sectionLabel: 'International Services',
+      heading: 'International Services We Provide',
+      items: [
+        {
+          icon: '🌱',
+          iconName: 'Leaf',
+          title: 'Climate Resilience and Adaptation',
+          description:
+            'We assess flood, heat, and storm risk and write adaptation plans with priority projects and funding paths. We adapt our vulnerability assessment methods to each country’s data and institutions.',
+        },
+        {
+          icon: '🏘️',
+          iconName: 'Home',
+          title: 'Informal Settlement Upgrading',
+          description:
+            'We prepare upgrading plans that cover land tenure, water, sanitation, drainage, and roads. Residents help set priorities, and we map existing homes and boundaries to help upgrades avoid displacing the people already living there.',
+        },
+        {
+          icon: '🏙️',
+          iconName: 'Building',
+          title: 'Global Housing Strategies',
+          description:
+            'We write national and city housing strategies that address affordability, land supply, housing finance, and land use rules.',
+        },
+        {
+          icon: '📐',
+          iconName: 'Compass',
+          title: 'Urbanization and Growth Management',
+          description:
+            'We prepare growth plans that direct new development to areas with infrastructure, protect farmland and open space, and set the order for roads, utilities, and services.',
+        },
+        {
+          icon: '👥',
+          iconName: 'Users',
+          title: 'Culturally Responsive Engagement',
+          description:
+            'We run multilingual surveys, community meetings, and focus groups, and we work through local leaders and institutions. Results are documented so decision makers can see what residents asked for.',
+        },
+        {
+          icon: '🌐',
+          iconName: 'Globe',
+          title: 'SDG Alignment and Reporting',
+          description:
+            'We align programs with the United Nations Sustainable Development Goals, with a focus on SDG 11 for sustainable cities and communities. We set indicators, collect baseline data, and prepare reports for funders and governments.',
+        },
+      ],
+    },
+    audiences: {
+      sectionLabel: 'Partners',
+      heading: 'We Work With',
+      intro:
+        'We work with the leaders and institutions responsible for governance and community care.',
+      items: [
+        {
+          icon: '🏛️',
+          iconName: 'Landmark',
+          label: 'National and Local Governments',
+        },
+        {
+          icon: '🤝',
+          iconName: 'Handshake',
+          label: 'International NGOs',
+        },
+        {
+          icon: '🏦',
+          iconName: 'Building2',
+          label: 'Development Finance Institutions',
+        },
+        {
+          icon: '🎓',
+          iconName: 'GraduationCap',
+          label: 'Research and Academic Partners',
         },
       ],
     },
     cta: {
-      heading: 'Building for Government? Let’s Talk.',
+      heading: 'Partner With Baystate Globally',
       description:
-        'Whether you’re a developer or a municipality, we can help you get the technology piece right.',
-      buttonText: 'Get In Touch',
+        'Let’s create durable plans for communities facing rapid growth and climate pressure.',
+      buttonText: 'Let’s Talk',
       buttonHref: '/#contact',
     },
   },
 ];
-

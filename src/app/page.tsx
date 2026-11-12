@@ -1,22 +1,25 @@
 import React from "react";
+import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
-import { StatsBar } from "@/components/home/StatsBar";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ServicesSection } from "@/components/home/ServicesSection";
-import { ForPlannersSection } from "@/components/home/ForPlannersSection";
-import { ForDevelopersSection } from "@/components/home/ForDevelopersSection";
+import { SupportingCommunitiesSection } from "@/components/home/SupportingCommunitiesSection";
 import { MissionSection } from "@/components/home/MissionSection";
 import { ContactSection } from "@/components/home/ContactSection";
+import { siteConfig } from "@/data/site";
+
+export const metadata: Metadata = {
+  title: `${siteConfig.name} — ${siteConfig.tagline}`,
+  description: siteConfig.metaDescription,
+};
 
 export default function HomePage() {
   return (
     <main>
       <Hero />
-      <StatsBar />
       <AboutSection />
       <ServicesSection />
-      <ForPlannersSection />
-      <ForDevelopersSection />
+      <SupportingCommunitiesSection />
       <MissionSection />
       <ContactSection />
     </main>

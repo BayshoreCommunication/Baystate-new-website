@@ -2,6 +2,8 @@ export interface ServiceItem {
   slug: string;
   title: string;
   shortTitle?: string;
+  metaDescription?: string;
+  heroHeading?: string;
   icon: string;
   iconName: string;
   eyebrow: string;
@@ -29,6 +31,7 @@ export interface ServiceItem {
   audiences?: {
     sectionLabel?: string;
     heading?: string;
+    intro?: string;
     items: {
       icon: string;
       iconName?: string;
@@ -63,6 +66,14 @@ export interface ServiceItem {
       examples: string;
     }[];
   };
+  conflictCommitment?: {
+    heading: string;
+    description: string;
+  };
+  narrativeBlock?: {
+    heading: string;
+    paragraphs: string[];
+  };
   cta: {
     heading: string;
     description: string;
@@ -70,4 +81,3 @@ export interface ServiceItem {
     buttonHref: string;
   };
 }
-

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/common/Container";
 import { ScrollReveal } from "@/components/common/ScrollReveal";
 
@@ -19,7 +20,6 @@ function FloatingBadge() {
       return;
     }
 
-    // Immediately trigger if already in view
     const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight + 100 && rect.bottom > -100) {
       setHasStarted(true);
@@ -54,17 +54,14 @@ function FloatingBadge() {
   useEffect(() => {
     if (!hasStarted) return;
 
-    // Delay 350ms so parent ScrollReveal fade-in is visible before counting starts
     const timer = setTimeout(() => {
       const target = 10;
-      const duration = 1200; // ms
+      const duration = 1200;
       const startTime = performance.now();
 
       const animate = (currentTime: number) => {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-
-        // easeOutExpo for dramatic deceleration at the end
         const easeOut = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
         const currentCount = Math.floor(easeOut * target);
 
@@ -93,9 +90,9 @@ function FloatingBadge() {
         <span>+</span>
       </div>
       <div className="text-[10px] tracking-[0.14em] uppercase text-white/85 mt-1.5 leading-tight">
-        Years Leading
+        Years of
         <br />
-        Communities
+        Experience
       </div>
     </div>
   );
@@ -104,20 +101,24 @@ function FloatingBadge() {
 export function AboutSection() {
   const credentials = [
     {
-      org: "Central MA Regional Planning Commission",
-      role: "Regional Planning Leadership",
+      org: "Central Massachusetts Regional Planning Commission",
+      role: "Regional planning leadership",
     },
     {
       org: "Cambridge Housing Authority",
-      role: "Affordable Housing Policy",
+      role: "Affordable housing policy",
     },
     {
-      org: "City of Cambridge — Dept. of Housing & Community Development",
-      role: "Community Development Strategy",
+      org: "City of Cambridge Department of Housing and Community Development",
+      role: "Community development strategy",
     },
     {
       org: "Vernon Housing Authority",
-      role: "Housing Authority Operations",
+      role: "Housing authority operations",
+    },
+    {
+      org: "City of Tampa",
+      role: "Local government experience",
     },
   ];
 
@@ -133,44 +134,56 @@ export function AboutSection() {
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[46px] text-navy font-normal leading-[1.2] mb-5">
-              Cross-Sector Expertise.
-              <br />
-              Community-First Vision.
+              Cross-sector expertise and a community-rooted vision
             </h2>
 
             <p className="text-primary-muted text-base leading-[1.8] mb-4.5">
-              At Baystate Planning &amp; Consulting, we bring over{" "}
-              <strong className="text-primary-text font-medium">
-                10 years of cross-sector experience
-              </strong>{" "}
-              in municipal, regional, and international planning.
+              Baystate Planning &amp; Consulting Group is a US-based planning
+              firm headquartered in Massachusetts. We serve cities, counties,
+              towns, housing authorities, regional agencies, and nonprofits
+              across the country, along with governments and organizations
+              abroad. Our work covers community planning, zoning and permitting,
+              affordable housing, grants, technical assistance, and government
+              technology.
             </p>
 
-            <p className="text-primary-muted text-base leading-[1.8] mb-8">
+            <p className="text-primary-muted text-base leading-[1.8] mb-6">
               Our founder,{" "}
               <strong className="text-primary-text font-medium">
                 Jasifa Chowdhury
               </strong>
-              , is an Urban Planner and Housing Policy Specialist with a strong
-              track record in affordable housing, zoning, land use strategy,
-              climate resilience, and federal/state grant writing.
+              , is an urban planner and housing policy specialist with more than
+              10 years of experience. Her background spans civil engineering and
+              urban planning, and her work covers affordable housing, zoning and
+              land use strategy, climate resilience, and grant writing. She has
+              worked with:
             </p>
 
             {/* Credentials List */}
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-2 mb-8">
               {credentials.map((cred, idx) => (
                 <div
                   key={idx}
-                  className="p-4 sm:px-5 sm:py-3.5 bg-warm-white rounded-md border-l-[3px] border-terracotta transition-all duration-200 hover:translate-x-1.5 hover:bg-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]"
+                  className="p-3.5 sm:px-4.5 sm:py-3 bg-warm-white rounded-md border-l-[3px] border-terracotta transition-all duration-200 hover:translate-x-1.5 hover:bg-white hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]"
                 >
-                  <div className="text-xs font-semibold text-navy tracking-[0.04em] uppercase">
+                  <div className="text-xs font-semibold text-navy tracking-[0.03em]">
                     {cred.org}
                   </div>
-                  <div className="text-[13px] text-primary-muted mt-0.5">
+                  <div className="text-[12.5px] text-primary-muted mt-0.5">
                     {cred.role}
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/who-we-are"
+                className="inline-flex items-center gap-2 text-xs font-medium tracking-wider uppercase text-terracotta hover:text-terracotta-light"
+              >
+                <span>Read Full Profile</span>
+                <span>→</span>
+              </Link>
             </div>
           </ScrollReveal>
 

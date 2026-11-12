@@ -6,7 +6,7 @@ export function ContactInfo() {
   const details = [
     {
       icon: <MapPin className="w-4 h-4 text-terracotta" />,
-      label: "Location",
+      label: "Headquarters",
       value: siteConfig.location,
     },
     {
@@ -30,13 +30,11 @@ export function ContactInfo() {
       </div>
 
       <h2 className="font-serif text-3xl sm:text-4xl lg:text-[42px] text-white font-normal leading-[1.2] mb-5">
-        Let&apos;s Build Something Together
+        Contact Us
       </h2>
 
-      <p className="text-white/50 text-base leading-[1.75] mb-10 font-light max-w-lg">
-        Whether you&apos;re a municipality, architect, developer, or nonprofit —
-        we&apos;d love to hear about your project and explore how Baystate can
-        help.
+      <p className="text-white/60 text-base leading-[1.75] mb-10 font-light max-w-lg">
+        Send us a note and tell us about your project.
       </p>
 
       <div className="flex flex-col gap-5">
