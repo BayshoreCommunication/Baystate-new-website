@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: 'Baystate Planning & Consulting Group',
   shortName: 'Baystate Planning',
+  url: 'https://www.baystateplanning.com/',
   tagline: 'Plans your community can use',
   heroHeading: 'Plans your community can use',
   heroSubheading:

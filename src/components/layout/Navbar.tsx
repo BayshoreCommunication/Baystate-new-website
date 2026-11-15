@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { mainNavItems, serviceDropdownItems } from "@/data/navigation";
@@ -9,6 +9,50 @@ import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const pathname = usePathname();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Clear timer and open dropdown immediately
+  const handleMouseEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setIsDropdownOpen(true);
+  };
+
+  // Grace period before closing (350ms) so user can comfortably move mouse to submenu
+  const handleMouseLeave = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+    }
+    closeTimeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 350);
+  };
+
+  // When clicking an item, immediately close the dropdown
+  const handleItemClick = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setIsDropdownOpen(false);
+  };
+
+  // Close dropdown on route change
+  useEffect(() => {
+    setIsDropdownOpen(false);
+  }, [pathname]);
+
+  // Clean up timer on unmount
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <ul className="hidden xl:flex items-center gap-6 2xl:gap-7 list-none m-0 p-0">
@@ -30,48 +74,91 @@ export function Navbar() {
           const isServicesActive = pathname.startsWith("/services");
 
           return (
-            <li key={item.label} className="relative group py-2">
+            <li
+              key={item.label}
+              className="relative py-2"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
               <Link
                 href={item.href}
+                onClick={handleItemClick}
+                onFocus={handleMouseEnter}
                 className={cn(
                   "text-[13px] tracking-[0.04em] font-normal transition-colors duration-200 inline-flex items-center gap-1.5 py-1",
-                  isServicesActive
+                  isServicesActive || isDropdownOpen
                     ? "text-white font-medium"
                     : "text-white/75 hover:text-white",
                 )}
               >
                 <span>{item.label}</span>
-                <span className="text-[9px] opacity-60 transition-transform duration-200 group-hover:rotate-180">
+                <span
+                  className={cn(
+                    "text-[9px] opacity-60 transition-transform duration-200",
+                    isDropdownOpen && "rotate-180 text-terracotta opacity-100",
+                  )}
+                >
                   ▾
                 </span>
               </Link>
 
-              {/* Dropdown Menu */}
-              <div className="absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-[330px] bg-white rounded-xl p-2.5 shadow-[0_16px_48px_rgba(0,0,0,0.18)] opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-50 pointer-events-none group-hover:pointer-events-auto">
+              {/* Dropdown Menu Container with hover bridge & delay */}
+              <div
+                className={cn(
+                  "absolute top-full pt-2 left-1/2 -translate-x-1/2 w-[340px] z-50 transition-all duration-200 ease-out",
+                  isDropdownOpen
+                    ? "opacity-100 visible translate-y-0 pointer-events-auto"
+                    : "opacity-0 invisible translate-y-1.5 pointer-events-none",
+                )}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
                 {/* Arrow Pointer */}
-                <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-0 h-0 border-x-[7px] border-x-transparent border-b-[7px] border-b-white" />
+                <div className="absolute top-0.5 left-1/2 -translate-x-1/2 w-0 h-0 border-x-[7px] border-x-transparent border-b-[7px] border-b-white z-10" />
 
-                <div className="flex flex-col gap-0.5 max-h-[420px] overflow-y-auto">
-                  {serviceDropdownItems.map((subItem) => (
-                    <React.Fragment key={subItem.href}>
-                      <Link
-                        href={subItem.href}
-                        className={cn(
-                          "flex items-center gap-2.5 px-3.5 py-2.5 rounded-md text-[13px] text-primary-text transition-all duration-150 hover:bg-warm-white hover:text-terracotta hover:translate-x-1",
-                          pathname === subItem.href &&
-                            "text-terracotta bg-warm-white font-medium",
+                {/* Dropdown Card */}
+                <div
+                  style={{
+                    overflow: "hidden",
+                    overflowX: "hidden",
+                    overflowY: "hidden",
+                    scrollbarWidth: "none",
+                  }}
+                  className="no-scrollbar bg-white rounded-xl p-2 shadow-[0_16px_48px_rgba(0,0,0,0.18)] border border-warm-gray/70 overflow-hidden select-none"
+                >
+                  <div
+                    style={{
+                      overflow: "hidden",
+                      overflowX: "hidden",
+                      overflowY: "hidden",
+                      scrollbarWidth: "none",
+                    }}
+                    className="no-scrollbar flex flex-col gap-0.5 overflow-hidden"
+                  >
+                    {serviceDropdownItems.map((subItem) => (
+                      <React.Fragment key={subItem.href}>
+                        <Link
+                          href={subItem.href}
+                          onClick={handleItemClick}
+                          className={cn(
+                            "group/sub flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-[13px] text-primary-text transition-all duration-150 hover:bg-[#FDF8F5] hover:text-terracotta overflow-hidden select-none outline-none focus:outline-none focus-visible:outline-none focus:ring-0 active:outline-none",
+                            pathname === subItem.href &&
+                              "text-terracotta bg-[#FDF8F5] font-medium",
+                          )}
+                        >
+                          <span className="w-5 flex justify-center items-center text-terracotta shrink-0 transition-transform duration-150 group-hover/sub:scale-110">
+                            <IconRenderer name={subItem.iconName} size={16} />
+                          </span>
+                          <span className="leading-snug transition-colors duration-150 whitespace-nowrap">
+                            {subItem.label}
+                          </span>
+                        </Link>
+                        {subItem.dividerAfter && (
+                          <div className="h-[1px] bg-warm-gray/80 my-1 mx-2" />
                         )}
-                      >
-                        <span className="w-5 flex justify-center items-center text-terracotta shrink-0">
-                          <IconRenderer name={subItem.iconName} size={16} />
-                        </span>
-                        <span className="leading-snug">{subItem.label}</span>
-                      </Link>
-                      {subItem.dividerAfter && (
-                        <div className="h-[1px] bg-warm-gray my-1 mx-2" />
-                      )}
-                    </React.Fragment>
-                  ))}
+                      </React.Fragment>
+                    ))}
+                  </div>
                 </div>
               </div>
             </li>

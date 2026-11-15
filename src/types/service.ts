@@ -2,6 +2,7 @@ export interface ServiceItem {
   slug: string;
   title: string;
   shortTitle?: string;
+  metaTitle?: string;
   metaDescription?: string;
   heroHeading?: string;
   icon: string;

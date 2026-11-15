@@ -5,9 +5,12 @@ import { ContactSection } from "@/components/home/ContactSection";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: `Contact Us — ${siteConfig.name}`,
+  title: "Contact Baystate Planning & Consulting | Get in Touch",
   description:
     "Send us a note and tell us about your project. Baystate Planning & Consulting Group serves communities nationwide.",
+  alternates: {
+    canonical: "https://www.baystateplanning.com/contact",
+  },
 };
 
 export default function ContactPage() {

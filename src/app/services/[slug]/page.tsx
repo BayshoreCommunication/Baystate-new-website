@@ -48,8 +48,11 @@ export function generateMetadata({ params }: ServicePageProps): Metadata {
   }
 
   return {
-    title: `${service.title} — ${siteConfig.name}`,
+    title: service.metaTitle || `${service.title} — ${siteConfig.name}`,
     description: service.metaDescription || service.heroDescription,
+    alternates: {
+      canonical: `https://www.baystateplanning.com/services/${service.slug}`,
+    },
   };
 }
 

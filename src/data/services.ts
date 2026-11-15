@@ -139,6 +139,7 @@ export const servicesData: ServiceItem[] = [
   {
     slug: 'housing-community-development',
     title: 'Housing and Community Development',
+    metaTitle: 'Housing & Community Development Consulting | Baystate',
     icon: '🏠',
     iconName: 'Home',
     eyebrow: 'Service',
@@ -833,6 +834,7 @@ export const servicesData: ServiceItem[] = [
   {
     slug: 'international-planning',
     title: 'International Planning',
+    metaTitle: 'International Urban Planning & Consulting | Baystate',
     icon: '🌐',
     iconName: 'Globe2',
     eyebrow: 'Service',

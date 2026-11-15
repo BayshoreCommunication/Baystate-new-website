@@ -63,7 +63,7 @@ export function ServiceIncluded({
                 <h3 className="text-[15px] font-semibold text-navy mb-2.5 leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-[13.5px] text-primary-muted leading-[1.7] mt-auto">
+                <p className="text-[13.5px] text-primary-muted leading-[1.7]">
                   {item.description}
                 </p>
               </div>

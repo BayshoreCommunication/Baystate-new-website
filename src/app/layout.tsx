@@ -21,10 +21,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://baystateplanning.com"
-  ),
-  title: `${siteConfig.name} — ${siteConfig.tagline}`,
+  metadataBase: new URL("https://www.baystateplanning.com"),
+  alternates: {
+    canonical: "https://www.baystateplanning.com/",
+  },
+  title: "Baystate Planning & Consulting | Urban Planning Experts",
   description: siteConfig.description,
 };
 

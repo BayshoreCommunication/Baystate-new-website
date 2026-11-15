@@ -9,8 +9,11 @@ import { ContactSection } from "@/components/home/ContactSection";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} — ${siteConfig.tagline}`,
+  title: "Baystate Planning & Consulting | Urban Planning Experts",
   description: siteConfig.metaDescription,
+  alternates: {
+    canonical: "https://www.baystateplanning.com/",
+  },
 };
 
 export default function HomePage() {
